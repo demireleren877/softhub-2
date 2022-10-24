@@ -17,6 +17,10 @@ app.get('/service', (req, res) => {
     res.render('service', { title: 'Hey', message: 'Hello there!' });
 });
 
+app.get('/about', (req, res) => {
+    res.render('about', { title: 'Hey', message: 'Hello there!' });
+});
+
 
 app.listen(process.env.PORT || 5000, () => {
     console.log('Example app listening on port 3000!')
