@@ -16,6 +16,9 @@ app.get('/faq', (req, res) => {
 app.get('/service', (req, res) => {
     res.render('service', { title: 'Hey', message: 'Hello there!' });
 });
+app.get('/how_work_with_us', (req, res) => {
+    res.render('how_work_with_us', { title: 'Hey', message: 'Hello there!' });
+});
 
 app.get('/about', (req, res) => {
     res.render('about', { title: 'Hey', message: 'Hello there!' });
