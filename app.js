@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const validator = require('email-validator');
 const nodemailer = require('nodemailer');
+const hbs = require('nodemailer-express-handlebars');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -22,7 +24,26 @@ app.post("/", (req, res) => {
         }
     });
 
+    const handlebarOptions = {
+        viewEngine: {
+            extName: '.html',
+            partialsDir: path.resolve('./views'),
+            defaultLayout: false,
+        },
+        viewPath: path.resolve('./views'),
+        extName: '.handlebars',
+    };
+
+    transporter.use('compile', hbs(handlebarOptions));
+
     const mailOptions = {
+        template: "email",
+        context: {
+            email: req.body.email,
+            name: req.body.name,
+            subject: req.body.subject,
+            message: req.body.message
+        },
         from: req.body.email,
         to: "demireleren877@gmail.com",
         subject: 'New Message From' + req.body.email + ': ' + req.body.subject,

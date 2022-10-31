@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .container {
+            font-family: arial;
+            font-size: 20px;
+            width: 100%;
+            height: 100%;
+            /* Center child horizontally*/
+            display: flex;
+            justify-content: center;
+        }
+
+        .child {
+            margin: auto;
+            width: 50%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="child">
+
+            <table>
+                <tr>
+                    <td style="text-align:center" colspan="2">
+                        <img style="height: 300px;"
+                            src="https://firebasestorage.googleapis.com/v0/b/node-cd53a.appspot.com/o/logo.jpeg?alt=media&token=a45a74f8-f406-4ad4-844d-27bdfbd57b2a"
+                            alt="">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h2>Some filled out your contact form:</h2>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td>
+                        <p><strong>Name: </strong></p>
+                    </td>
+                    <td>
+                        <p>{{name}}</p>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td>
+                        <p><strong>E-Mail: </strong></p>
+                    </td>
+                    <td>
+                        <p style="text-decoration: none">{{email}}</p>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td>
+                        <p><strong>Subject: </strong></p>
+                    </td>
+                    <td>
+                        <p>{{subject}}</p>
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td>
+                        <p><strong>Message: </strong></p>
+                    </td>
+                    <td>
+                        <p>{{message}}</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
