@@ -83,24 +83,22 @@ app.post("/faq", async (req, res) => {
 
     if (req.body.name && req.body.email && req.body.subject && req.body.message) {
         if (validator.validate(req.body.email)) {
-            console.log("Email is valid");
             try {
                 const re = await request(options);
                 console.log(options);
-                if (!JSON.parse(re.body)['success']) {
-                    return res.send({ response: "Failed" });
+                if (JSON.parse(re.body)['success']) {
+                    transporter.sendMail(mailOptions, function (error, info) {
+                        if (error) {
+                            console.log(error);
+                            res.send('error');
+                        } else {
+                            console.log('Email sent: ' + info.response);
+                            res.send('success');
+                        }
+                    });
+                    return res.redirect('/');
                 }
 
-                transporter.sendMail(mailOptions, function (error, info) {
-                    if (error) {
-                        console.log(error);
-                        res.send('error');
-                    } else {
-                        console.log('Email sent: ' + info.response);
-                        res.send('success');
-                    }
-                });
-                return res.redirect('/');
             } catch (error) {
                 return res.send({ response: "Failed" });
             }
@@ -108,7 +106,7 @@ app.post("/faq", async (req, res) => {
 
         }
     } else {
-        res.send('error');
+
     }
 
 

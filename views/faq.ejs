@@ -10700,36 +10700,23 @@
                                                                 Send Message</h2>
                                                         </div><!-- /.sc_title -->
                                                         <form action="/faq" method="post" id="contact-form"
-                                                            class="wpcf7-form init" novalidate="novalidate"
-                                                            data-status="init">
-                                                            <div style="display: none;">
-                                                                <input type="hidden" name="_wpcf7" value="764" />
-                                                                <input type="hidden" name="_wpcf7_version"
-                                                                    value="5.6.3" />
-                                                                <input type="hidden" name="_wpcf7_locale"
-                                                                    value="en_US" />
-                                                                <input type="hidden" name="_wpcf7_unit_tag"
-                                                                    value="wpcf7-f764-p188-o1" />
-                                                                <input type="hidden" name="_wpcf7_container_post"
-                                                                    value="188" />
-                                                                <input type="hidden" name="_wpcf7_posted_data_hash"
-                                                                    value="" />
-                                                            </div>
+                                                            class="wpcf7-form init">
                                                             <div class="flex">
                                                                 <div class='itm row'><span
                                                                         class="wpcf7-form-control-wrap"
                                                                         data-name="your-name"><input type="text"
                                                                             name="name" value="" size="40" id="name"
-                                                                            class="wpcf7-form-control wpcf7-text required"
-                                                                            aria-required="true" aria-invalid="false"
-                                                                            placeholder="Your name*" /></span></div>
+                                                                            class="wpcf7-form-control wpcf7-text"
+                                                                            placeholder="Your name*" required /></span>
+                                                                </div>
                                                                 <div class='itm row'><span
                                                                         class="wpcf7-form-control-wrap"
                                                                         data-name="your-email"><input type="email"
                                                                             id="email" name="email" value="" size="40"
                                                                             class="wpcf7-form-control wpcf7-text wpcf7-email required"
                                                                             aria-required="true" aria-invalid="false"
-                                                                            placeholder="Your e-mail*" /></span>
+                                                                            placeholder="Your e-mail*"
+                                                                            required /></span>
                                                                 </div>
                                                             </div>
                                                             <div class='row'><span class="wpcf7-form-control-wrap"
@@ -10737,19 +10724,24 @@
                                                                         name="subject" value="" size="40" id="subject"
                                                                         class="wpcf7-form-control wpcf7-text required"
                                                                         aria-required="true" aria-invalid="false"
-                                                                        placeholder="Your subject*" /></span></div>
+                                                                        placeholder="Your subject*" required /></span>
+                                                            </div>
                                                             <div class=''><span class="wpcf7-form-control-wrap"
                                                                     data-name="your-message"><textarea name="message"
                                                                         cols="40" rows="10" id="message"
                                                                         class="wpcf7-form-control wpcf7-textarea required"
                                                                         aria-required="true" aria-invalid="false"
-                                                                        placeholder="Your message*"></textarea></span>
+                                                                        placeholder="Your message*"
+                                                                        required></textarea></span>
                                                             </div>
-                                                            <div class="g-recaptcha"
+                                                            <br>
+                                                            <div class="g-recaptcha" data-callback="submit"
                                                                 data-sitekey="6LcND8wiAAAAAJbFBRyBRNOkeX0uAWWxS4LRyX8H">
                                                             </div>
-
-                                                            <button type="submit">Submit</button>
+                                                            <br>
+                                                            <button id="submitBtn" type="submit" value="Submit"
+                                                                disabled>Send
+                                                                Message</button>
                                                         </form>
                                                     </div>
                                                 </div><!-- /.sc_content -->
@@ -11149,37 +11141,14 @@
         id='mc4wp-forms-api-js'></script>
 
     <script>
-        const contactForm = document.getElementById('contact-form');
-        let name = document.getElementById('name');
-        let email = document.getElementById('email');
-        let subject = document.getElementById('subject');
-        let message = document.getElementById('message');
-
-        contactForm.addEventListener('submit', (e) => {
-            // console.log('submit');
-            // e.preventDefault();
-            // let formData = {
-            //     name: name.value,
-            //     email: email.value,
-            //     subject: subject.value,
-            //     message: message.value
-            // }
-            // let xhr = new XMLHttpRequest();
-            //xhr.open('POST', '/');
-            // xhr.setRequestHeader('content-type', 'application/json');
-            // xhr.onload = function () {
-            //     console.log(xhr.responseText);
-            //     if (xhr.responseText == 'success') {
-            //         name.value = '';
-            //         email.value = '';
-            //         subject.value = '';
-            //         message.value = '';
-            //     } else {
-            //         alert('Something went wrong');
-            //     }
-            // }
-            //xhr.send(JSON.stringify(formData));
-        });
+        function submit() {
+            var response = grecaptcha.getResponse();
+            if (response != '0') {
+                document.getElementById("submitBtn").removeAttribute("disabled");
+            } else {
+                alert("Please verify that you are not a robot");
+            }
+        }
     </script>
 </body>
 
