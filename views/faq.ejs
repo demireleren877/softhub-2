@@ -10474,7 +10474,29 @@
                                                         Sıkça Sorulan Sorular</h1>
                                                     <div
                                                         class="row sc_services_columns sc_item_columns sc_item_columns_2 trx_addons_columns_wrap">
-                                                        <div class="col-9">
+                                                        <% faqs.forEach(element=> { %>
+                                                            <div class="col-9">
+                                                                <div
+                                                                    class="sc_services_item without_content with_number sc_services_item_featured_left">
+                                                                    <span class="sc_services_item_number">
+                                                                        <%=element["id"]%>
+                                                                    </span>
+                                                                    <div class="sc_services_item_info">
+                                                                        <div class="sc_services_item_header">
+                                                                            <h6 class="sc_services_item_title">
+                                                                                <%=element["question"]%>
+                                                                            </h6>
+                                                                        </div>
+                                                                        <div class="sc_services_item_content">
+                                                                            <p>
+                                                                                <%=element["answer"]%>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <% }) %>
+                                                                <!-- <div class="col-9">
                                                             <div
                                                                 class="sc_services_item without_content with_number sc_services_item_featured_left">
                                                                 <span class="sc_services_item_number">01</span>
@@ -10664,7 +10686,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
 
                                                     </div>
                                                 </div><!-- /.sc_services -->

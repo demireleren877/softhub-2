@@ -40,8 +40,12 @@
 		#insta:hover {
 			color: darkblue;
 		}
-	</style>
 
+		.mySlides {
+			display: none;
+		}
+	</style>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link property="stylesheet" rel='stylesheet' id='vc_extensions_cqbundle_adminicon-css'
 		href='wp-content/plugins/vc-extensions-bundle/css/admin_icon.css?ver=6.0.2' type='text/css' media='all'>
 	<link property="stylesheet" rel='stylesheet' id='trx_demo_icons-css'
@@ -9982,7 +9986,7 @@
 	<script type='text/javascript' id='wpgdprc-front-js-js-extra'>
 		/* <![CDATA[ */
 		var wpgdprcFront = { "ajaxUrl": "https:\/\/christine-miller.themerex.net\/wp-admin\/admin-ajax.php", "ajaxNonce": "1cad82814a", "ajaxArg": "security", "pluginPrefix": "wpgdprc", "blogId": "1", "isMultiSite": "", "locale": "en_US", "showSignUpModal": "", "showFormModal": "", "cookieName": "wpgdprc-consent", "consentVersion": "", "path": "\/", "prefix": "wpgdprc" };
-/* ]]> */
+	/* ]]> */
 	</script>
 	<script type='text/javascript' src='wp-content/plugins/wp-gdpr-compliance/Assets/js/front.min.js?ver=1663245446'
 		id='wpgdprc-front-js-js'></script>
@@ -10183,6 +10187,29 @@
 			background-color: #cc884c !important;
 		}
 	</style>
+	<link href="css/owl.carousel.min.css" rel="stylesheet">
+	<link href="css/owl.theme.default.min.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			var owl = $('.owl-carousel');
+			owl.owlCarousel({
+				items: 4,
+				loop: true,
+				margin: 10,
+				autoplay: true,
+				autoplayTimeout: 3000,
+				autoplayHoverPause: true
+			});
+			$('.play').on('click', function () {
+				owl.trigger('play.owl.autoplay', [1000])
+			})
+			$('.stop').on('click', function () {
+				owl.trigger('stop.owl.autoplay')
+			})
+		});
+	</script>
 </head>
 
 <body
@@ -10801,8 +10828,34 @@
 												</div>
 												<div
 													class="wpb_column vc_column_container vc_col-sm-6 vc_hidden-xs vc_col-has-fill sc_layouts_column_icons_position_left">
-													<div class="vc_column-inner vc_custom_1492119362609">
-														<div class="wpb_wrapper"></div>
+													<div class="vc_column-inner">
+														<div class="wpb_wrapper">
+															<div id="sc_action_629658929"
+																class="scheme_dark sc_action sc_action_simple custom_action_small">
+																<div class="sc_action_content sc_item_content">
+																	<div class="sc_action_item sc_action_item_simple with_image with_bg_color sc_action_fixed_height sc_action_item_bl"
+																		style="background-image: url(wp-content/uploads/2017/03/service-1.jpg);height:33.33vh;overflow:hidden;">
+																		<div class="sc_action_item_mask"></div>
+																		<div class="sc_action_item_inner">
+																			<div
+																				class="sc_action_item_icon sc_action_item_icon_type_ Array">
+																				<span
+																					class="sc_action_item_icon_type_ Array"></span>
+																			</div>
+																			<h3 class="sc_action_item_title">
+																				<span>XXXXX </span>
+																				<span>xxx</span>
+																			</h3>
+																			<h6 class="sc_action_item_subtitle">
+																				<span>Keşfet</span>
+																			</h6>
+																		</div><!-- /.sc_action_item_inner --><a
+																			href="/service"
+																			class="sc_action_item_link sc_action_item_link_over"></a>
+																	</div>
+																</div>
+															</div><!-- /.sc_action -->
+														</div>
 													</div>
 												</div>
 											</div>
@@ -11234,313 +11287,112 @@
 												<h2
 													class="sc_item_title sc_content_title sc_align_left sc_item_title_style_default sc_item_title_tag">
 													Uzmanlık Alanlarımız</h2>
-												<div class="sc_content_container">
-													<div class="vc_empty_space" style="height: 2.2em"><span
-															class="vc_empty_space_inner"></span></div>
-													<div class="vc_tta-container" data-vc-action="collapse">
-														<div
-															class="vc_general vc_tta vc_tta-tabs vc_tta-color-white vc_tta-style-flat vc_tta-shape-square vc_tta-spacing-1 vc_tta-tabs-position-top vc_tta-controls-align-left">
-															<div class="vc_tta-tabs-container">
-																<ul class="vc_tta-tabs-list">
-																	<li class="vc_tta-tab vc_active" data-vc-tab="">
-																		<a href="#1489583581247-b75ebfba-0ec8"
-																			data-vc-tabs=""
-																			data-vc-container=".vc_tta"><span
-																				class="vc_tta-title-text">Kullandığımız
-																				Diller</span></a>
-																	</li>
-																	<li class="vc_tta-tab" data-vc-tab=""><a
-																			href="#1489583581272-c03a4181-7e30"
-																			data-vc-tabs=""
-																			data-vc-container=".vc_tta"><span
-																				class="vc_tta-title-text">Frameworks</span></a>
-																	</li>
-																	<li class="vc_tta-tab" data-vc-tab=""><a
-																			href="#1489583581272-c03a4181-7e304"
-																			data-vc-tabs=""
-																			data-vc-container=".vc_tta"><span
-																				class="vc_tta-title-text">Tools
-																			</span></a>
-																	</li>
-																	<li class="vc_tta-tab" data-vc-tab=""><a
-																			href="#1489583581272-c03a4181-7e309"
-																			data-vc-tabs=""
-																			data-vc-container=".vc_tta"><span
-																				class="vc_tta-title-text">Databases
-																			</span></a>
-																	</li>
-																</ul>
-															</div>
-															<div class="vc_tta-panels-container">
-																<div class="vc_tta-panels">
-																	<div class="vc_tta-panel vc_active"
-																		id="1489583581247-b75ebfba-0ec8"
-																		data-vc-content=".vc_tta-panel-body">
-																		<div class="vc_tta-panel-heading">
-																			<h4 class="vc_tta-panel-title"><a
-																					href="#1489583581247-b75ebfba-0ec8"
-																					data-vc-accordion=""
-																					data-vc-container=".vc_tta-container"><span
-																						class="vc_tta-title-text">Kullandığımız
-																						Diller</span></a>
-																			</h4>
-																		</div>
-																		<div class="vc_tta-panel-body">
-																			<div
-																				class="wpb_text_column wpb_content_element ">
-																				<div class="wpb_wrapper">
-																					<table>
-																						<tbody>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">1</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>Java/C#</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">2</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>Javascript
-																									</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">3</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>HTML5</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">4</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>C/C++</h6>
-																								</td>
-																							</tr>
-																						</tbody>
-																					</table>
-
-																				</div>
+												<div class="w3-content w3-section">
+													<div class="mySlides w3-animate-right sc_content_container">
+														<div class="vc_empty_space" style="height: 2.2em"><span
+																class="vc_empty_space_inner"></span></div>
+														<div class="vc_tta-container" data-vc-action="collapse">
+															<div
+																class="vc_general vc_tta vc_tta-tabs vc_tta-color-white vc_tta-style-flat vc_tta-shape-square vc_tta-spacing-1 vc_tta-tabs-position-top vc_tta-controls-align-left">
+																<div class="vc_tta-tabs-container">
+																	<ul class="vc_tta-tabs-list">
+																		<li class="vc_tta-tab vc_active" data-vc-tab="">
+																			<a href="#1489583581247-b75ebfba-0ec8"
+																				id="slider1" data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Kullandığımız
+																					Diller</span></a>
+																		</li>
+																		<li class="vc_tta-tab" data-vc-tab=""><a
+																				id="slider2"
+																				href="#1489583581272-c03a4181-7e30"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Frameworks</span></a>
+																		</li>
+																		<li class="vc_tta-tab" data-vc-tab=""><a
+																				id="slider3"
+																				href="#1489583581272-c03a4181-7e304"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Tools
+																				</span></a>
+																		</li>
+																		<li class="vc_tta-tab" data-vc-tab=""><a
+																				id="slider4"
+																				href="#1489583581272-c03a4181-7e309"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Databases
+																				</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="vc_tta-panels-container">
+																	<div class="vc_tta-panels">
+																		<div class="vc_tta-panel vc_active"
+																			id="1489583581247-b75ebfba-0ec8"
+																			data-vc-content=".vc_tta-panel-body">
+																			<div class="vc_tta-panel-heading">
+																				<h4 class="vc_tta-panel-title"><a
+																						href="#1489583581247-b75ebfba-0ec8"
+																						data-vc-accordion=""
+																						data-vc-container=".vc_tta-container"><span
+																							class="vc_tta-title-text">Kullandığımız
+																							Diller</span></a>
+																				</h4>
 																			</div>
-																		</div>
-																	</div>
-																	<div class="vc_tta-panel"
-																		id="1489583581272-c03a4181-7e30"
-																		data-vc-content=".vc_tta-panel-body">
-																		<div class="vc_tta-panel-heading">
-																			<h4 class="vc_tta-panel-title"><a
-																					href="#1489583581272-c03a4181-7e30"
-																					data-vc-accordion=""
-																					data-vc-container=".vc_tta-container"><span
-																						class="vc_tta-title-text">Frameworks</span></a>
-																			</h4>
-																		</div>
-																		<div class="vc_tta-panel-body">
-																			<div
-																				class="wpb_text_column wpb_content_element ">
-																				<div class="wpb_wrapper">
-																					<table>
-																						<tbody>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">1</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>React
-																									</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">2</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>Angular
-																									</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">3</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>Vue
-																									</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">4</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>.NET
-																									</h6>
-																								</td>
-																							</tr>
+																			<div class="vc_tta-panel-body">
+																				<div
+																					class="wpb_text_column wpb_content_element ">
+																					<div class="wpb_wrapper">
+																						<table>
+																							<tbody>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">1</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>Java/C#</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">2</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>Javascript
+																										</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">3</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>HTML5</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">4</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>C/C++</h6>
+																									</td>
+																								</tr>
+																							</tbody>
+																						</table>
 
-																						</tbody>
-																					</table>
-
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="vc_tta-panel"
-																		id="1489583581272-c03a4181-7e304"
-																		data-vc-content=".vc_tta-panel-body">
-																		<div class="vc_tta-panel-heading">
-																			<h4 class="vc_tta-panel-title"><a
-																					href="#1489583581272-c03a4181-7e304"
-																					data-vc-accordion=""
-																					data-vc-container=".vc_tta-container"><span
-																						class="vc_tta-title-text">Tools</span></a>
-																			</h4>
-																		</div>
-																		<div class="vc_tta-panel-body">
-																			<div
-																				class="wpb_text_column wpb_content_element ">
-																				<div class="wpb_wrapper">
-																					<table>
-																						<tbody>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">1</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>IntelliJ
-																									</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">2</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>Eclipse
-																									</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">3</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>MS Office
-																									</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">4</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>Visual
-																										Studio
-																									</h6>
-																								</td>
-																							</tr>
-
-																						</tbody>
-																					</table>
-
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="vc_tta-panel"
-																		id="1489583581272-c03a4181-7e309"
-																		data-vc-content=".vc_tta-panel-body">
-																		<div class="vc_tta-panel-heading">
-																			<h4 class="vc_tta-panel-title"><a
-																					href="#1489583581272-c03a4181-7e309"
-																					data-vc-accordion=""
-																					data-vc-container=".vc_tta-container"><span
-																						class="vc_tta-title-text">Databases</span></a>
-																			</h4>
-																		</div>
-																		<div class="vc_tta-panel-body">
-																			<div
-																				class="wpb_text_column wpb_content_element ">
-																				<div class="wpb_wrapper">
-																					<table>
-																						<tbody>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">1</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>MsSQL/MySQL
-																									</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">2</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>PostgreSQL
-																									</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">3</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>MongoDB</h6>
-																								</td>
-																							</tr>
-																							<tr>
-																								<td>
-																									<h2><span
-																											style="color: #1439b6;">4</span>
-																									</h2>
-																								</td>
-																								<td>
-																									<h6>Oracle</h6>
-																								</td>
-																							</tr>
-
-																						</tbody>
-																					</table>
-
+																					</div>
 																				</div>
 																			</div>
 																		</div>
@@ -11548,10 +11400,379 @@
 																</div>
 															</div>
 														</div>
+														<div class="vc_empty_space" style="height: 2.2em"><span
+																class="vc_empty_space_inner"></span></div>
 													</div>
-													<div class="vc_empty_space" style="height: 2.2em"><span
-															class="vc_empty_space_inner"></span></div>
+													<div class="mySlides w3-animate-right sc_content_container">
+														<div class="vc_empty_space" style="height: 2.2em"><span
+																class="vc_empty_space_inner"></span></div>
+														<div class="vc_tta-container" data-vc-action="collapse">
+															<div
+																class="vc_general vc_tta vc_tta-tabs vc_tta-color-white vc_tta-style-flat vc_tta-shape-square vc_tta-spacing-1 vc_tta-tabs-position-top vc_tta-controls-align-left">
+																<div class="vc_tta-tabs-container">
+																	<ul class="vc_tta-tabs-list">
+																		<li class="vc_tta-tab" data-vc-tab="">
+																			<a href="#1489583581247-b75ebfba-0ec8"
+																				id="slider1" data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Kullandığımız
+																					Diller</span></a>
+																		</li>
+																		<li class="vc_tta-tab vc_active" data-vc-tab="">
+																			<a id="slider2"
+																				href="#1489583581272-c03a4181-7e30"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Frameworks</span></a>
+																		</li>
+																		<li class="vc_tta-tab" data-vc-tab=""><a
+																				id="slider3"
+																				href="#1489583581272-c03a4181-7e304"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Tools
+																				</span></a>
+																		</li>
+																		<li class="vc_tta-tab" data-vc-tab=""><a
+																				id="slider4"
+																				href="#1489583581272-c03a4181-7e309"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Databases
+																				</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="vc_tta-panels-container">
+																	<div class="vc_tta-panels">
+																		<div class="vc_tta-panel vc_active"
+																			id="1489583581272-c03a4181-7e30"
+																			data-vc-content=".vc_tta-panel-body">
+																			<div class="vc_tta-panel-heading">
+																				<h4 class="vc_tta-panel-title"><a
+																						href="#1489583581272-c03a4181-7e30"
+																						data-vc-accordion=""
+																						data-vc-container=".vc_tta-container"><span
+																							class="vc_tta-title-text">Frameworks</span></a>
+																				</h4>
+																			</div>
+																			<div class="vc_tta-panel-body">
+																				<div
+																					class="wpb_text_column wpb_content_element ">
+																					<div class="wpb_wrapper">
+																						<table>
+																							<tbody>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">1</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>React
+																										</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">2</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>Angular
+																										</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">3</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>Vue
+																										</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">4</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>.NET
+																										</h6>
+																									</td>
+																								</tr>
+
+																							</tbody>
+																						</table>
+
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="vc_empty_space" style="height: 2.2em"><span
+																class="vc_empty_space_inner"></span></div>
+													</div>
+													<div class="mySlides w3-animate-right sc_content_container">
+														<div class="vc_empty_space" style="height: 2.2em"><span
+																class="vc_empty_space_inner"></span></div>
+														<div class="vc_tta-container" data-vc-action="collapse">
+															<div
+																class="vc_general vc_tta vc_tta-tabs vc_tta-color-white vc_tta-style-flat vc_tta-shape-square vc_tta-spacing-1 vc_tta-tabs-position-top vc_tta-controls-align-left">
+																<div class="vc_tta-tabs-container">
+																	<ul class="vc_tta-tabs-list">
+																		<li class="vc_tta-tab" data-vc-tab="">
+																			<a href="#1489583581247-b75ebfba-0ec8"
+																				id="slider1" data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Kullandığımız
+																					Diller</span></a>
+																		</li>
+																		<li class="vc_tta-tab" data-vc-tab=""><a
+																				id="slider2"
+																				href="#1489583581272-c03a4181-7e30"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Frameworks</span></a>
+																		</li>
+																		<li class="vc_tta-tab vc_active" data-vc-tab="">
+																			<a id="slider3"
+																				href="#1489583581272-c03a4181-7e304"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Tools
+																				</span></a>
+																		</li>
+																		<li class="vc_tta-tab" data-vc-tab=""><a
+																				id="slider4"
+																				href="#1489583581272-c03a4181-7e309"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Databases
+																				</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="vc_tta-panels-container">
+																	<div class="vc_tta-panels">
+																		<div class="vc_tta-panel vc_active"
+																			id="1489583581272-c03a4181-7e304"
+																			data-vc-content=".vc_tta-panel-body">
+																			<div class="vc_tta-panel-heading">
+																				<h4 class="vc_tta-panel-title"><a
+																						href="#1489583581272-c03a4181-7e304"
+																						data-vc-accordion=""
+																						data-vc-container=".vc_tta-container"><span
+																							class="vc_tta-title-text">Tools</span></a>
+																				</h4>
+																			</div>
+																			<div class="vc_tta-panel-body">
+																				<div
+																					class="wpb_text_column wpb_content_element ">
+																					<div class="wpb_wrapper">
+																						<table>
+																							<tbody>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">1</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>IntelliJ
+																										</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">2</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>Eclipse
+																										</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">3</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>MS Office
+																										</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">4</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>Visual
+																											Studio
+																										</h6>
+																									</td>
+																								</tr>
+
+																							</tbody>
+																						</table>
+
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="vc_empty_space" style="height: 2.2em"><span
+																class="vc_empty_space_inner"></span></div>
+													</div>
+													<div class="mySlides w3-animate-right sc_content_container">
+														<div class="vc_empty_space" style="height: 2.2em"><span
+																class="vc_empty_space_inner"></span></div>
+														<div class="vc_tta-container" data-vc-action="collapse">
+															<div
+																class="vc_general vc_tta vc_tta-tabs vc_tta-color-white vc_tta-style-flat vc_tta-shape-square vc_tta-spacing-1 vc_tta-tabs-position-top vc_tta-controls-align-left">
+																<div class="vc_tta-tabs-container">
+																	<ul class="vc_tta-tabs-list">
+																		<li class="vc_tta-tab" data-vc-tab="">
+																			<a href="#1489583581247-b75ebfba-0ec8"
+																				id="slider1" data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Kullandığımız
+																					Diller</span></a>
+																		</li>
+																		<li class="vc_tta-tab" data-vc-tab=""><a
+																				id="slider2"
+																				href="#1489583581272-c03a4181-7e30"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Frameworks</span></a>
+																		</li>
+																		<li class="vc_tta-tab" data-vc-tab=""><a
+																				id="slider3"
+																				href="#1489583581272-c03a4181-7e304"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Tools
+																				</span></a>
+																		</li>
+																		<li class="vc_tta-tab vc_active" data-vc-tab="">
+																			<a id="slider4"
+																				href="#1489583581272-c03a4181-7e309"
+																				data-vc-tabs=""
+																				data-vc-container=".vc_tta"><span
+																					class="vc_tta-title-text">Databases
+																				</span></a>
+																		</li>
+																	</ul>
+																</div>
+																<div class="vc_tta-panels-container">
+																	<div class="vc_tta-panels">
+																		<div class="vc_tta-panel vc_active"
+																			id="1489583581272-c03a4181-7e309"
+																			data-vc-content=".vc_tta-panel-body">
+																			<div class="vc_tta-panel-heading">
+																				<h4 class="vc_tta-panel-title"><a
+																						href="#1489583581272-c03a4181-7e309"
+																						data-vc-accordion=""
+																						data-vc-container=".vc_tta-container"><span
+																							class="vc_tta-title-text">Databases</span></a>
+																				</h4>
+																			</div>
+																			<div class="vc_tta-panel-body">
+																				<div
+																					class="wpb_text_column wpb_content_element ">
+																					<div class="wpb_wrapper">
+																						<table>
+																							<tbody>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">1</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>MsSQL/MySQL
+																										</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">2</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>PostgreSQL
+																										</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">3</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>MongoDB</h6>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<h2><span
+																												style="color: #1439b6;">4</span>
+																										</h2>
+																									</td>
+																									<td>
+																										<h6>Oracle</h6>
+																									</td>
+																								</tr>
+
+																							</tbody>
+																						</table>
+
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="vc_empty_space" style="height: 2.2em"><span
+																class="vc_empty_space_inner"></span></div>
+													</div>
 												</div>
+												<script>
+													var myIndex = 0;
+													carousel();
+
+													function carousel() {
+														var i;
+														var x = document.getElementsByClassName("mySlides");
+														for (i = 0; i < x.length; i++) {
+															x[i].style.display = "none";
+														}
+														myIndex++;
+														if (myIndex > x.length) { myIndex = 1 }
+														x[myIndex - 1].style.display = "block";
+														setTimeout(carousel, 3000);
+													}
+												</script>
 											</div><!-- /.sc_content -->
 										</div>
 									</div>
@@ -11665,16 +11886,7 @@
 																	sizes="(max-width: 509px) 100vw, 509px">
 															</div>
 														</figure>
-														<figure class='gallery-item'>
-															<div class='gallery-icon landscape'>
-																<img width="509" height="128"
-																	src="wp-content/uploads/2017/05/client-5.png"
-																	class="attachment-full size-full" alt=""
-																	loading="lazy"
-																	srcset="wp-content/uploads/2017/05/client-5.png 509w, wp-content/uploads/2017/05/client-5-300x75.png 300w, wp-content/uploads/2017/05/client-5-370x93.png 370w"
-																	sizes="(max-width: 509px) 100vw, 509px">
-															</div>
-														</figure>
+
 													</div>
 
 
@@ -11866,99 +12078,18 @@
 												<h1
 													class="sc_item_title sc_blogger_title sc_align_center sc_item_title_style_default sc_item_title_tag">
 													Hadi İşi Bitirelim !</h1>
+
 												<div
-													class="row sc_blogger_columns sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
-													<div class="col-lg-4 col-sm-12">
-														<div id="post-86"
-															class="sc_blogger_item post_format_standard post-86 post type-post status-publish format-standard has-post-thumbnail hentry category-assistant-guide tag-job tag-papers">
-															<div class="sc_blogger_item_content entry-content">
-																<span class="sc_blogger_item_number">01</span>
-																<div class="sc_blogger_item_header entry-header">
-																	<h4 class="sc_blogger_item_title entry-title"><a
-																			href="how-to-declutter-and-simplify/index.htm"
-																			rel="bookmark">Project Specifc
-																			Collaboration</a></h4>
-																</div><!-- .entry-header -->
-																<div class="sc_blogger_item_excerpt">
-																	<div class="sc_blogger_item_excerpt_text">
-																		<p>Belirli bir proje süresi boyunca Türkiye
-																			ve Yunanistan'dan uzaktan ek destek
-																			arayan mevcut ekibi ve projesi olan
-																			işletmeler için özel işbirlikleri
-																			sağlıyoruz.</p>
-																	</div>
-																	<div class="post_meta"> <span
-																			class="post_meta_item post_date"><a
-																				href="how-to-declutter-and-simplify/index.htm">March
-																				14, 2017</a></span>
-																	</div><!-- .post_meta -->
-																	<div class="sc_line"></div>
-																</div><!-- .sc_blogger_item_excerpt -->
-															</div><!-- .entry-content -->
-														</div><!-- .sc_blogger_item -->
-														<span>&nbsp;</span>
+													class="owl-carousel owl-theme  sc_blogger_columns sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
+													<% posts.forEach((element,index)=> { %>
 
-													</div>
-													<div class="col-lg-4 col-sm-12">
-														<div id="post-88"
-															class="sc_blogger_item post_format_standard post-88 post type-post status-publish format-standard has-post-thumbnail hentry category-assistant-guide tag-business tag-deals">
-															<div class="sc_blogger_item_content entry-content">
-																<span class="sc_blogger_item_number">02</span>
-																<div class="sc_blogger_item_header entry-header">
-																	<h4 class="sc_blogger_item_title entry-title">
-																		Integrated <br> Teams
-																	</h4>
-																</div><!-- .entry-header -->
-																<div class="sc_blogger_item_excerpt">
-																	<div class="sc_blogger_item_excerpt_text">
-																		<p>Türkiye ve Yunanistan'dan teknoloji
-																			uzmanlarının sürekli uzaktan
-																			entegrasyonuyla mevcut ekiplerini
-																			genişletmek isteyen işletmeler için
-																			entegre ekipler kuruyoruz. </p>
-																	</div>
-																	<div class="post_meta"> <span
-																			class="post_meta_item post_date"><a
-																				href="how-to-relax-on-vacation/index.htm">March
-																				10, 2017</a></span>
-																	</div><!-- .post_meta -->
-																	<div class="sc_line"></div>
-																</div><!-- .sc_blogger_item_excerpt -->
-															</div><!-- .entry-content -->
-														</div><!-- .sc_blogger_item -->
-														<span>&nbsp;</span>
+														<div class="">
+															<img src=<%="/images/" +index+".jpg"%> alt="" >
+															<span>&nbsp;</span>
 
-													</div>
-													<div class="col-lg-4 col-sm-12">
-														<div id="post-90"
-															class="sc_blogger_item post_format_standard post-90 post type-post status-publish format-standard hentry category-business tag-business tag-job">
-															<div class="sc_blogger_item_content entry-content">
-																<span class="sc_blogger_item_number">03</span>
-																<div class="sc_blogger_item_header entry-header">
-																	<h4 class="sc_blogger_item_title entry-title"><a
-																			href="habits-for-a-more-relaxed-life/index.htm"
-																			rel="bookmark">Captive Outsourcing</a>
-																	</h4>
-																</div><!-- .entry-header -->
-																<div class="sc_blogger_item_excerpt">
-																	<div class="sc_blogger_item_excerpt_text">
-																		<p>Özel yerel teknoloji uzmanlarıyla Türkiye
-																			veya Yunanistan'da kendi tüzel
-																			kişiliğini kurmak isteyen işletmeler
-																			için destek sağlıyoruz. </p>
-																	</div>
-																	<div class="post_meta"> <span
-																			class="post_meta_item post_date"><a
-																				href="habits-for-a-more-relaxed-life/index.htm">March
-																				6, 2017</a></span>
-																	</div><!-- .post_meta -->
-																	<div class="sc_line"></div>
-																</div><!-- .sc_blogger_item_excerpt -->
-															</div><!-- .entry-content -->
-														</div><!-- .sc_blogger_item -->
-														<span>&nbsp;</span>
+														</div>
 
-													</div>
+														<% }) %>
 												</div>
 											</div><!-- /.sc_blogger -->
 											<div class="vc_empty_space" style="height: 3.3em"><span
