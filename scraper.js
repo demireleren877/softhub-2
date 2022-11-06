@@ -27,6 +27,8 @@ function getPostWithFectch(res) {
     })
         .then(response => response.json())
         .then(data => {
+            console.log(res.statusCode);
+
             let images = [];
             data.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
                 images.push(item.node.display_url);
@@ -35,7 +37,7 @@ function getPostWithFectch(res) {
                 download(item, 'public/images/' + index + '.jpg', function () {
                 });
             });
-            res.send(data);
+            res.render('test', { title: 'Instagram Scraper', posts: images });
 
         })
         .catch(error => {
