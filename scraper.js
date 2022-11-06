@@ -33,17 +33,12 @@ function getPosts(res) {
             JSON.parse(data).data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
                 images.push(item.node.display_url);
             });
-            console.log(images);
             images.forEach((item, index) => {
                 download(item, 'public/images/' + index + '.jpg', function () {
-                    console.log('done');
                 });
 
             });
             res.render('main', { posts: images });
-
-
-
         });
 
     }
