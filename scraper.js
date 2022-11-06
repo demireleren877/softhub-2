@@ -27,18 +27,18 @@ function getPostWithFectch(res) {
         .then(async response => {
             try {
                 if (response.status == 200) {
-                    let images = [];
-                    const data = await response.json();
-
+                    let data = { "data": "sessionid=1" };
+                    let posts = [];
+                    data = await response.json();
                     data.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
-                        images.push(item.node.display_url);
+                        posts.push(item.node);
                     });
-                    images.forEach((item, index) => {
-                        download(item, 'public/images/' + index + '.jpg', function () {
+                    posts.forEach((item, index) => {
+                        download(item.display_url, 'public/images/' + index + '.jpg', function () {
                         });
                     });
 
-                    res.render('test', { posts: images });
+                    res.render('test', { posts: posts });
                 }
 
             } catch (error) {
