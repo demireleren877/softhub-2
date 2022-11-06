@@ -7,10 +7,6 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 const options = {
     headers: {
         'x-ig-app-id': "936619743392459",
-        "content-type": "application/x-www-form-urlencoded",
-        "accept": "*/*",
-
-
     },
 };
 
@@ -26,12 +22,14 @@ function getPostWithFectch(res) {
         method: 'GET',
         headers: {
             'x-ig-app-id': "936619743392459",
+            "content-type": "application/x-www-form-urlencoded",
+            "accept": "*/*",
         },
     })
         .then(async response => {
             try {
                 if (response.status == 200) {
-                    let data = { "data": "sessionid=1" };
+                    let data = { "data": "ses" };
                     let posts = [];
                     data = await response.json();
                     data.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
@@ -62,7 +60,7 @@ function getPostWithFectch(res) {
 function getPosts(res) {
     https.get("https://i.instagram.com/api/v1/users/web_profile_info/?username=soft.hubtr", options, (resp) => {
         let data = '';
-        let posts = [];
+        let images = [];
         console.log(resp.statusCode);
 
 
@@ -74,14 +72,13 @@ function getPosts(res) {
 
             resp.on('end', () => {
                 try {
-                    JSON.parse(data.trim()).data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
-                        posts.push(item.node);
+                    JSON.parse(data).data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
+                        images.push(item.node.display_url);
                     });
-                    posts.forEach((item, index) => {
-                        download(item.display_url, 'public/images/' + index + '.jpg', function () {
+                    images.forEach((item, index) => {
+                        download(item, 'public/images/' + index + '.jpg', function () {
                         });
                     });
-                    res.render('test', { posts: posts });
 
                 } catch (error) {
                     console.log(error);
@@ -97,4 +94,4 @@ function getPosts(res) {
     });
 }
 
-module.exports = getPosts;
+module.exports = getPostWithFectch;
