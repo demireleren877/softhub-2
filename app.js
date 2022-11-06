@@ -7,7 +7,7 @@ const hbs = require('nodemailer-express-handlebars');
 const { promisify } = require('util');
 const request = promisify(require('request'));
 const getDataFirestore = require('./firebase');
-const getPostWithFectch = require('./scraper');
+const getPosts = require('./scraper');
 
 app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/test', (req, res) => {
-    getPostWithFectch(res);
+    getPosts(res);
 });
 
 

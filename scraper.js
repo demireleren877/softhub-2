@@ -58,7 +58,7 @@ function getPostWithFectch(res) {
 function getPosts(res) {
     https.get("https://i.instagram.com/api/v1/users/web_profile_info/?username=soft.hubtr", options, (resp) => {
         let data = '';
-        let images = [];
+        let posts = [];
         console.log(resp.statusCode);
 
 
@@ -70,13 +70,14 @@ function getPosts(res) {
 
             resp.on('end', () => {
                 try {
-                    JSON.parse(data).data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
-                        images.push(item.node.display_url);
+                    JSON.parse(data.trim()).data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
+                        posts.push(item.node);
                     });
-                    images.forEach((item, index) => {
-                        download(item, 'public/images/' + index + '.jpg', function () {
+                    posts.forEach((item, index) => {
+                        download(item.display_url, 'public/images/' + index + '.jpg', function () {
                         });
                     });
+                    res.render('test', { posts: posts });
 
                 } catch (error) {
                     console.log(error);
@@ -92,4 +93,4 @@ function getPosts(res) {
     });
 }
 
-module.exports = getPostWithFectch;
+module.exports = getPosts;
