@@ -30,16 +30,19 @@ function getPosts(res) {
         });
 
         resp.on('end', () => {
-            const apiData = JSON.parse(data);
-            apiData.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
-                images.push(item.node.display_url);
-            });
-            images.forEach((item, index) => {
-                download(item, 'public/images/' + index + '.jpg', function () {
+            try {
+                JSON.parse(data).data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
+                    images.push(item.node.display_url);
                 });
+                images.forEach((item, index) => {
+                    download(item, 'public/images/' + index + '.jpg', function () {
+                    });
 
-            });
-            res.render('main', { posts: images });
+                });
+                res.render('main', { posts: images });
+            } catch (error) {
+                console.log(error);
+            }
         });
 
     }
