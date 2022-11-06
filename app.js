@@ -16,7 +16,8 @@ app.use(express.static('node_modules'));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    getPosts(res);
+    res.render('main');
+    // getPosts(res);
 });
 
 
