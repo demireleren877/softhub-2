@@ -10198,9 +10198,27 @@
 				items: 4,
 				loop: true,
 				margin: 10,
+				navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
 				autoplay: true,
 				autoplayTimeout: 3000,
-				autoplayHoverPause: true
+				autoplayHoverPause: true,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 2,
+						nav: true,
+
+					},
+					600: {
+						items: 3,
+						nav: false
+					},
+					1000: {
+						items: 4,
+						nav: true,
+						margin: 20
+					}
+				}
 			});
 			$('.play').on('click', function () {
 				owl.trigger('play.owl.autoplay', [1000])
@@ -12079,7 +12097,7 @@
 													class="sc_item_title sc_blogger_title sc_align_center sc_item_title_style_default sc_item_title_tag">
 													Hadi İşi Bitirelim !</h1>
 
-												<div
+												<!-- <div
 													class="owl-carousel owl-theme  sc_blogger_columns sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
 													<% posts.forEach((element,index)=> { %>
 
@@ -12090,7 +12108,7 @@
 														</div>
 
 														<% }) %>
-												</div>
+												</div> -->
 											</div><!-- /.sc_blogger -->
 											<div class="vc_empty_space" style="height: 3.3em"><span
 													class="vc_empty_space_inner"></span></div>
