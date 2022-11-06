@@ -22,33 +22,16 @@ function getPostWithFectch(res) {
         method: 'GET',
         headers: {
             'x-ig-app-id': "936619743392459",
-            "content-type": "application/x-www-form-urlencoded",
-            "accept": "*/*",
         },
-    })
-        .then(async response => {
-            try {
-                if (response.status == 200) {
-                    let data = { "data": "ses" };
-                    let posts = [];
-                    data = await response.json();
-                    data.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
-                        posts.push(item.node);
-                    });
-                    posts.forEach((item, index) => {
-                        download(item.display_url, 'public/images/' + index + '.jpg', function () {
-                        });
-                    });
-
-                    res.render('test', { posts: posts });
-                }
-
-            } catch (error) {
-
-                console.log(error);
-
-            }
-        }).catch(error => {
+    }).then((response) => response.json())
+        .then((data) => {
+            let posts = [];
+            data.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
+                posts.push(item.node);
+            });
+            res.render('test', { posts: posts });
+        }
+        ).catch((error) => {
             console.log(error);
         });
 
