@@ -23,7 +23,6 @@ function getPostWithFectch(res) {
         method: 'GET',
         headers: {
             'x-ig-app-id': "936619743392459",
-            "content-type": "application/json",
         },
     })
         .then(response => response.json())
