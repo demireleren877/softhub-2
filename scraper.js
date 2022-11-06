@@ -1,6 +1,7 @@
 const https = require('https');
 const fs = require('fs');
 const request = require('request');
+const { json } = require('express');
 
 const options = {
     headers: {
@@ -24,27 +25,30 @@ function getPosts(res) {
     https.get("https://i.instagram.com/api/v1/users/web_profile_info/?username=soft.hubtr", options, (resp) => {
         let data = '';
         let images = [];
+        console.log(resp.statusCode);
 
 
-        resp.on('data', (chunk) => {
-            data += chunk;
-        });
+        if (resp.statusCode == 200) {
+            resp.on('data', (chunk) => {
+                data += chunk;
+            });
 
-        resp.on('end', () => {
-            try {
-                JSON.parse(data).data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
-                    images.push(item.node.display_url);
-                });
-                images.forEach((item, index) => {
-                    download(item, 'public/images/' + index + '.jpg', function () {
+
+            resp.on('end', () => {
+                try {
+                    JSON.parse(data).data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
+                        images.push(item.node.display_url);
                     });
-
-                });
-                res.render('test', { posts: images });
-            } catch (error) {
-                console.log(error);
-            }
-        });
+                    images.forEach((item, index) => {
+                        download(item, 'public/images/' + index + '.jpg', function () {
+                        });
+                    });
+                    res.render('test', { posts: images });
+                } catch (error) {
+                    console.log(error);
+                }
+            });
+        }
 
     }
     ).on("error", (err) => {
