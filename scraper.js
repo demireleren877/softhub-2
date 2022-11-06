@@ -19,7 +19,7 @@ var download = function (uri, filename, callback) {
 
 
 function getPostWithFectch(res) {
-    fetch('https://i.instagram.com/api/v1/users/web_profile_info/?username=soft.hubtr', {
+    fetch('https://i.instagram.com/api/v1/users/web_profile_info/?username=google', {
         method: 'GET',
         headers: {
             'x-ig-app-id': "936619743392459",
