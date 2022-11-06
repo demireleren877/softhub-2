@@ -19,30 +19,37 @@ var download = function (uri, filename, callback) {
 
 
 function getPostWithFectch(res) {
-    fetch('https://i.instagram.com/api/v1/users/web_profile_info/?username=google', {
+    fetch('https://i.instagram.com/api/v1/users/web_profile_info/?username=soft.hubtr', {
         method: 'GET',
         headers: {
             'x-ig-app-id': "936619743392459",
         },
     })
-        .then(response => response.json())
-        .then(data => {
-            console.log(res.statusCode);
+        .then(async response => {
+            try {
+                let images = [];
+                const data = await response.json();
 
-            let images = [];
-            data.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
-                images.push(item.node.display_url);
-            });
-            images.forEach((item, index) => {
-                download(item, 'public/images/' + index + '.jpg', function () {
+                data.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
+                    images.push(item.node.display_url);
                 });
-            });
-            res.render('test', { title: 'Instagram Scraper', posts: images });
+                images.forEach((item, index) => {
+                    download(item, 'public/images/' + index + '.jpg', function () {
+                    });
+                });
 
-        })
-        .catch(error => {
+                res.render('test', { posts: images });
+
+            } catch (error) {
+
+                console.log(error);
+
+            }
+        }).catch(error => {
             console.log(error);
         });
+
+
 }
 
 
