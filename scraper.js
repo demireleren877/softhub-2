@@ -7,7 +7,6 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 const options = {
     headers: {
         'x-ig-app-id': "936619743392459",
-        "content-type": "application/json",
     },
 };
 
