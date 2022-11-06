@@ -26,18 +26,20 @@ function getPostWithFectch(res) {
     })
         .then(async response => {
             try {
-                let images = [];
-                const data = await response.json();
+                if (response.status == 200) {
+                    let images = [];
+                    const data = await response.json();
 
-                data.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
-                    images.push(item.node.display_url);
-                });
-                images.forEach((item, index) => {
-                    download(item, 'public/images/' + index + '.jpg', function () {
+                    data.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
+                        images.push(item.node.display_url);
                     });
-                });
+                    images.forEach((item, index) => {
+                        download(item, 'public/images/' + index + '.jpg', function () {
+                        });
+                    });
 
-                res.render('test', { posts: images });
+                    res.render('test', { posts: images });
+                }
 
             } catch (error) {
 
