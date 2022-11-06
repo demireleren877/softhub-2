@@ -43,11 +43,13 @@ function getPosts(res) {
                         download(item, 'public/images/' + index + '.jpg', function () {
                         });
                     });
-                    res.render('test', { posts: images });
+
                 } catch (error) {
                     console.log(error);
                 }
             });
+        } else {
+            console.log("Error");
         }
 
     }
