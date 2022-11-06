@@ -30,7 +30,8 @@ function getPosts(res) {
         });
 
         resp.on('end', () => {
-            JSON.parse(data).data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
+            const apiData = JSON.parse(data);
+            apiData.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
                 images.push(item.node.display_url);
             });
             images.forEach((item, index) => {
