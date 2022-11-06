@@ -5,6 +5,7 @@ const request = require('request');
 const options = {
     headers: {
         'x-ig-app-id': "936619743392459",
+        "content-type": "application/json",
     },
 };
 
@@ -39,7 +40,7 @@ function getPosts(res) {
                     });
 
                 });
-                res.render('main', { posts: images });
+                res.render('test', { posts: images });
             } catch (error) {
                 console.log(error);
             }

@@ -17,7 +17,10 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
     res.render('main');
-    // getPosts(res);
+});
+
+app.get('/test', (req, res) => {
+    getPosts(res);
 });
 
 
