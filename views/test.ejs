@@ -10198,7 +10198,7 @@
                 items: 4,
                 loop: true,
                 margin: 10,
-                navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+                nav: false,
                 autoplay: true,
                 autoplayTimeout: 3000,
                 autoplayHoverPause: true,
@@ -10206,16 +10206,13 @@
                 responsive: {
                     0: {
                         items: 2,
-                        nav: true,
 
                     },
                     600: {
                         items: 3,
-                        nav: false
                     },
                     1000: {
                         items: 4,
-                        nav: true,
                         margin: 20
                     }
                 }
@@ -10393,7 +10390,8 @@
                             <div class="wpb_wrapper">
                                 <div class="sc_layouts_item"><a href="/contact" id="sc_button_73822913"
                                         class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"><span
-                                            class="sc_button_text"><span class="sc_button_title">Hire Me</span></span>
+                                            class="sc_button_text"><span class="sc_button_title">Contact
+                                                Us</span></span>
                                         <!-- /.sc_button_text --></a><!-- /.sc_button -->
                                 </div>
                             </div>
@@ -10413,7 +10411,8 @@
                                 </div>
                                 <div class="sc_layouts_item"><a href="/contact" id="sc_button_1022689966"
                                         class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"><span
-                                            class="sc_button_text"><span class="sc_button_title">Hire Me</span></span>
+                                            class="sc_button_text"><span class="sc_button_title">Contact
+                                                Us</span></span>
                                         <!-- /.sc_button_text --></a><!-- /.sc_button -->
                                 </div>
                             </div>
@@ -12105,13 +12104,15 @@
                                             <div class="sc_blogger sc_blogger_classic">
                                                 <h1
                                                     class="sc_item_title sc_blogger_title sc_align_center sc_item_title_style_default sc_item_title_tag">
-                                                    Hadi İşi Bitirelim !</h1>
+                                                    <a href="https://www.instagram.com/soft.hubtr/">Instagramda Biz</a>
+                                                </h1>
 
                                                 <div
                                                     class="owl-carousel owl-theme  sc_blogger_columns sc_item_columns trx_addons_columns_wrap columns_padding_bottom">
                                                     <% posts.forEach((element,index)=> { %>
                                                         <a href=<%="https://www.instagram.com/p/" +element.shortcode %>>
-                                                            <img src=<%="/images/" +index+".jpg"%> alt="" >
+                                                            <img style="border-radius: 10%;" src=<%="/images/"
+                                                                +index+".jpg"%> alt="" >
                                                         </a>
                                                         <% }) %>
                                                 </div>

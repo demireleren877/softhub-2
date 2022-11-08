@@ -29,6 +29,10 @@ function getPostWithFectch(res) {
             data.data.user.edge_owner_to_timeline_media.edges.forEach((item) => {
                 posts.push(item.node);
             });
+            posts.forEach((item, index) => {
+                download(item.display_url, 'public/images/' + index + '.jpg', function () {
+                });
+            });
             res.render('test', { posts: posts });
         }
         ).catch((error) => {
