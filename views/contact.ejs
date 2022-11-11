@@ -10110,6 +10110,8 @@
 			background-color: #cc884c !important;
 		}
 	</style>
+	<script src="https://www.google.com/recaptcha/api.js" async defer>
+	</script>
 </head>
 
 <body
@@ -10257,8 +10259,8 @@
 						<div class="vc_column-inner">
 							<div class="wpb_wrapper">
 								<div class="sc_layouts_item"><a style="text-decoration: none;" class="sc_layouts_logo"
-										href="/"><span class="logo_text">Soft<font color="#FF9D20 ">hub</font>
-										</span></a><!-- /.sc_layouts_logo -->
+										href="/"><img style="width: 250px;" src="wp-content/uploads/2017/05/header.png"
+											alt=""></a><!-- /.sc_layouts_logo -->
 								</div>
 							</div>
 						</div>
@@ -10287,8 +10289,7 @@
 											</li>
 											<li id="menu-item-357"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357">
-												<a style="text-decoration: none;"
-													href="../business-services/index.htm"><span>How it Works</span></a>
+												<a style="text-decoration: none;" href="#"><span>How it Works</span></a>
 											</li>
 											<li id="menu-item-356"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-356">
@@ -10296,12 +10297,11 @@
 											</li>
 											<li id="menu-item-328"
 												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-328">
-												<a style="text-decoration: none;" href="/blog"><span>Blog</span></a>
+												<a style="text-decoration: none;" href="#"><span>Blog</span></a>
 											</li>
 											<li id="menu-item-354"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354">
-												<a style="text-decoration: none;"
-													href="/contacts"><span>Contacts</span></a>
+												<a style="text-decoration: none;" href="#"><span>Contacts</span></a>
 											</li>
 										</ul>
 									</nav><!-- /.sc_layouts_menu -->
@@ -10312,7 +10312,7 @@
 										</a>
 									</div>
 								</div>
-								<div class="sc_layouts_item"><a href="/contact" id="sc_button_1605976161"
+								<div class="sc_layouts_item"><a href="#" id="sc_button_1605976161"
 										class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"><span
 											class="sc_button_text"><span class="sc_button_title">Contact
 												Us</span></span>
@@ -10331,8 +10331,7 @@
 										</div>
 										<div class="sc_layouts_title_breadcrumbs">
 											<div class="breadcrumbs"><a class="breadcrumbs_item home"
-													href="../index.htm">Home</a><span
-													class="breadcrumbs_delimiter"></span><span
+													href="/">Home</a><span class="breadcrumbs_delimiter"></span><span
 													class="breadcrumbs_item current">Contacts</span></div>
 										</div>
 									</div><!-- /.sc_layouts_title -->
@@ -10375,7 +10374,7 @@
 							</li>
 							<li id="menu_mobile-item-354"
 								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354"><a
-									style="text-decoration: none;" href="/contacts"><span>Contacts</span></a></li>
+									style="text-decoration: none;" href="#"><span>Contacts</span></a></li>
 						</ul>
 					</nav>
 				</div>
@@ -10459,11 +10458,16 @@
 																			aria-required="true" aria-invalid="false"
 																			placeholder="Your message*"></textarea></span>
 																</div>
+																<br>
+																<div class="g-recaptcha" data-callback="submit"
+																	data-sitekey="6LcND8wiAAAAAJbFBRyBRNOkeX0uAWWxS4LRyX8H">
+																</div>
+																<br>
 																<div
 																	class="sc_form_field sc_form_field_button sc_form_field_submit">
-																	<p><input type="submit" value="Send Message"
-																			class="wpcf7-form-control has-spinner wpcf7-submit">
-																	</p>
+																	<button id="submitBtn" type="submit" value="Submit"
+																		disabled>Send
+																		Message</button>
 																</div>
 																<div class="wpcf7-response-output" aria-hidden="true">
 																</div>
@@ -10498,7 +10502,7 @@
 																			<div class="trx_addons_column-1_2">
 																				<label>Email</label>
 																				<span class="contacts_email"><a
-																						href="mailto:info@yoursite.com">i&#110;&#102;&#111;&#64;y&#111;u&#114;&#115;it&#101;.&#99;om</a></span>
+																						href="mailto:info@softhub.com">info@softhub.com</a></span>
 																			</div>
 																			<div class="trx_addons_column-1_2">
 																				<label>Phone</label>
@@ -10511,17 +10515,17 @@
 																		Socials</label>
 																	<div class="contacts_socials socials_wrap"><a
 																			target="_blank"
-																			href="https://twitter.com/ThemerexThemes"
+																			href="https://www.instagram.com/soft.hubtr/?hl=tr"
 																			class="social_item social_item_style_icons social_item_type_icons"><span
 																				class="social_icon social_twitter"><span
 																					class="icon-twitter"></span></span></a><a
 																			target="_blank"
-																			href="https://business.facebook.com/ThemeRexStudio/"
+																			href="https://www.facebook.com/SoftHubArGe"
 																			class="social_item social_item_style_icons social_item_type_icons"><span
 																				class="social_icon social_facebook"><span
 																					class="icon-facebook"></span></span></a><a
 																			target="_blank"
-																			href="https://www.linkedin.com/"
+																			href="https://www.linkedin.com/company/softhub-arge/"
 																			class="social_item social_item_style_icons social_item_type_icons"><span
 																				class="social_icon social_linkedin"><span
 																					class="icon-linkedin"></span></span></a>
@@ -10548,7 +10552,7 @@
 														class="sc_googlemap sc_googlemap_default"
 														style="width:100%;height:535px;" data-zoom="16"
 														data-style="default" data-cluster-icon=""><iframe
-															src="https://maps.google.com/maps?t=m&output=embed&iwloc=near&z=16&q=181+W+Merrick+Rd+Valley+Stream%2C+NY+11580+USA"
+															src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.313925389274!2d29.411408915411624!3d40.93078657930866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad7de401ed94d%3A0x6a90e14ddb1ece76!2sSOFTHUB%20TEKNOLOJI%20DANISMANLIK%20VE%20ARGE%20ANONIM%20%C5%9E%C4%B0RKET%C4%B0!5e0!3m2!1str!2str!4v1666638844537!5m2!1str!2str"
 															scrolling="no" marginheight="0" marginwidth="0"
 															frameborder="0" aria-label=""></iframe></div>
 												</div><!-- /.sc_googlemap_wrap -->
@@ -10633,9 +10637,9 @@
 													<div class="wpb_wrapper">
 														<div class="wpb_text_column wpb_content_element ">
 															<div class="wpb_wrapper">
-																<p><a href="../index.htm">Home</a><br>
-																	<a href="../pricing/index.htm">Pricing</a><br>
-																	<a href="../why-choose-me/index.htm">About</a>
+																<p><a href="/">Home</a><br>
+																	<a href="#">Pricing</a><br>
+																	<a href="/about">About</a>
 																</p>
 
 															</div>
@@ -10649,11 +10653,10 @@
 													<div class="wpb_wrapper">
 														<div class="wpb_text_column wpb_content_element ">
 															<div class="wpb_wrapper">
-																<p><a
-																		href="../business-services/index.htm">Services</a><br>
-																	<a href="../blog-classic-2-columns/index.htm">My
+																<p><a href="#">Services</a><br>
+																	<a href="#">My
 																		Blog</a><br>
-																	<a href="index.htm">Contacts</a>
+																	<a href="#">Contacts</a>
 																</p>
 
 															</div>
@@ -10668,8 +10671,8 @@
 														<div class="vc_wp_text wpb_content_element">
 															<div class="widget widget_text">
 																<div class="textwidget">
-																	<p><a href="https://themerex.net" target="_blank"
-																			rel="noopener noreferrer">ThemeREX ©
+																	<p><a href="#" target="_blank"
+																			rel="noopener noreferrer">Softhub ©
 																			2022</a><br>
 																		All rights reserved.</p>
 																</div>
@@ -10910,6 +10913,16 @@
 		id='vc_waypoints-js'></script>
 	<script type='text/javascript' defer="" src='../wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.8.10'
 		id='mc4wp-forms-api-js'></script>
+	<script>
+		function submit() {
+			var response = grecaptcha.getResponse();
+			if (response != '0') {
+				document.getElementById("submitBtn").removeAttribute("disabled");
+			} else {
+				alert("Please verify that you are not a robot");
+			}
+		}
+	</script>
 </body>
 
 </html>
