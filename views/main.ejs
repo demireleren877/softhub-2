@@ -12,6 +12,8 @@
 	<link rel='dns-prefetch' href='//fonts.googleapis.com'>
 	<link rel='dns-prefetch' href='//s.w.org'>
 	<link rel="alternate" type="application/rss+xml" title="Miller &raquo; Feed" href="feed/index.htm">
+	<link href='https://fonts.googleapis.com/css?family=Blinker' rel='stylesheet'>
+
 	<link rel="alternate" type="application/rss+xml" title="Miller &raquo; Comments Feed"
 		href="comments/feed/index.htm">
 	<script type="text/javascript">
@@ -44,6 +46,16 @@
 		.mySlides {
 			display: none;
 		}
+
+		.bottom-right {
+			position: absolute;
+			bottom: 8px;
+			right: 16px;
+		}
+		.brmedium {
+            display: block;
+            margin-top: 0.5em;
+        }
 	</style>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link property="stylesheet" rel='stylesheet' id='vc_extensions_cqbundle_adminicon-css'
@@ -10228,12 +10240,33 @@
 </head>
 <script>
 	function onload() {
-
+		duzenle();
 
 	}
+	function duzenle() {
+		var width = window.innerWidth;
+		if (width > 1200) {
+			document.getElementById("largeekran").style.display = "block";
+			document.getElementById("smallekran").style.display = "none";
+			document.getElementById("mediumekran").style.display = "none";
+		}
+		else {
+			if (width > 1000) {
+				document.getElementById("largeekran").style.display = "none";
+				document.getElementById("smallekran").style.display = "none";
+				document.getElementById("mediumekran").style.display = "block";
+			}
+			else {
+				document.getElementById("largeekran").style.display = "none";
+				document.getElementById("smallekran").style.display = "block";
+				document.getElementById("mediumekran").style.display = "none";
+			}
+		}
+	}
+
 </script>
 
-<body onload="onload()"
+<body onresize="duzenle()" onload="onload()"
 	class="home page-template-default page page-id-303 custom-background frontpage body_tag scheme_default blog_mode_home body_style_wide  is_stream blog_style_excerpt sidebar_hide expand_content remove_margins header_style_header-custom-540 header_position_over trx_addons_present menu_style_right menu_style_side no_layout wpb-js-composer js-comp-ver-6.9.0 vc_responsive">
 	<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
 		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
@@ -10396,12 +10429,6 @@
 											alt=""></a>
 									<!-- /.sc_layouts_logo -->
 								</div>
-								<div class="sc_layouts_item"><a href="/contact" id="sc_button_1022689966"
-										class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"><span
-											class="sc_button_text"><span class="sc_button_title">Contact
-												Us</span></span>
-										<!-- /.sc_button_text --></a><!-- /.sc_button -->
-								</div>
 							</div>
 						</div>
 					</div>
@@ -10470,6 +10497,63 @@
 			</div>
 
 			<div class="page_content_wrap scheme_default">
+				<div id="largeekran">
+					<div class="row">
+						<img style="height: 80vh; width: 100%;" src="anasayfa/usst.png" alt="">
+						<div
+							style="color:#1F3861; font-family: Blinker; font-size: 35px;display: flex; height: 20vh; background-color: #FA9D26; width: 50%;">
+							<p style="margin-top: 6vh; margin-left:10%;">En iyisinden daha azını
+								istemeyin ve bu bizi <font class="brmedium">mükemmelliğe yaklaştırsın.</font>  </p>
+						</div>
+						<div
+							style="height: 20vh; background-color: #E1591B; width: 50%; display: flex;">
+							<p style="margin-top: 5vh; margin-left:10%;">
+								<b style="color: #fefefe;  font-size: 35px;">Bize Ulaşın!</b><br>
+								<a style="color:#fefefe; font-weight: 400; font-size: 26px; text-align:center ;text-decoration: none; margin-top: 0.75em; display: block;"
+									href="mailto:softhub@softhub.com">softhub@softhub.com
+								</a>
+								<a style="color:#fefefe; font-weight: 400; font-size: 24px;text-align:left ;text-decoration: none;"
+									href="tel:02162220343">0216 222 03 43
+								</a>
+							</p>
+							<img style="width:125px ;height:125px ;margin-top: 4vh; margin-left:40%; "
+								src="wp-content/uploads/2017/05/cropped-favicon-180x180.png" alt="">
+
+						</div>
+
+					</div>
+				</div>
+				<div id="mediumekran">
+					<div class="row">
+						<img style="height: 70vh; width: 100%;" src="anasayfa/usst.png" alt="">
+						<div
+							style="color:#1F3861; font-family: Blinker; font-size: 24px;display: flex; height: 30vh; background-color: #FA9D26; width: 50%;">
+							<p style="margin-top: 10vh; margin-left:10%;">En iyisinden daha azını
+								istemeyin ve bu bizi <font class="brmedium">mükemmelliğe yaklaştırsın.</font>  </p>
+						</div>
+						<div
+							style="background-color: #E1591B; width: 50%; display: flex;">
+							<p style="margin-top: 8vh; margin-left:10%;">
+								<b style="color: #fefefe;  font-size: 28px;">Bize Ulaşın!</b><br>
+								<a style="color:#fefefe; font-weight: 400; font-size: 26px; text-align:center ;text-decoration: none; margin-top: 0.75em; display: block;"
+									href="mailto:softhub@softhub.com">softhub@softhub.com
+								</a>
+								<a style="color:#fefefe; font-weight: 400; font-size: 24px;text-align:left ;text-decoration: none;"
+									href="tel:02162220343">0216 222 03 43
+								</a>
+							</p>
+							<img style="width:75px ;height:75px ;margin-top: 8vh; margin-left:10%; "
+								src="wp-content/uploads/2017/05/cropped-favicon-180x180.png" alt="">
+
+						</div>
+
+					</div>
+				</div>
+				<div id="smallekran">
+					<div class="row">
+						<img  src="anasayfa/mobil.png" alt="">
+					</div>
+				</div>
 
 				<div class="content_wrap">
 
@@ -10487,7 +10571,11 @@
 											<div class="wpb_wrapper">
 												<!-- START Home 1 REVOLUTION SLIDER 6.5.31 -->
 												<p class="rs-p-wp-fix"></p>
-												<rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery"
+
+
+
+
+												<!-- <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery"
 													style="visibility:hidden;background:transparent;padding:0;">
 													<rs-module id="rev_slider_1_1" data-version="6.5.31">
 														<rs-slides>
@@ -10503,7 +10591,7 @@
 															</rs-slide>
 														</rs-slides>
 													</rs-module>
-												</rs-module-wrap>
+												</rs-module-wrap> -->
 												<!-- END REVOLUTION SLIDER -->
 											</div>
 										</div>
