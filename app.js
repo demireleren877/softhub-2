@@ -113,12 +113,12 @@ app.get('/about', (req, res) => {
     res.render('about', { title: 'Hey', message: 'Hello there!' });
 });
 
-app.get('/contact', (req, res) => {
+app.get('/contacts', (req, res) => {
     res.render('contact', { title: 'Hey', message: 'Hello there!' });
 });
 
 
 
 app.listen(process.env.PORT || 5000, () => {
-    console.log('Example app listening on port 3000!')
+    console.log('Example app listening on port 5000!')
 })
