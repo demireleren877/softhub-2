@@ -102,8 +102,20 @@ app.get('/faq', (req, res) => {
     getDataFirestore(res);
 });
 
-app.get('/service', (req, res) => {
-    res.render('service', { title: 'Hey', message: 'Hello there!' });
+app.get('/service-1', (req, res) => {
+    res.render('service-1', { title: 'Hey', message: 'Hello there!' });
+});
+app.get('/service-2', (req, res) => {
+    res.render('service-2', { title: 'Hey', message: 'Hello there!' });
+});
+app.get('/service-3', (req, res) => {
+    res.render('service-3', { title: 'Hey', message: 'Hello there!' });
+});
+app.get('/service-4', (req, res) => {
+    res.render('service-4', { title: 'Hey', message: 'Hello there!' });
+});
+app.get('/service-5', (req, res) => {
+    res.render('service-5', { title: 'Hey', message: 'Hello there!' });
 });
 app.get('/how_work_with_us', (req, res) => {
     res.render('how_work_with_us', { title: 'Hey', message: 'Hello there!' });
