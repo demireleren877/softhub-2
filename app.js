@@ -120,6 +120,9 @@ app.get('/service-5', (req, res) => {
 app.get('/how_work_with_us', (req, res) => {
     res.render('how_work_with_us', { title: 'Hey', message: 'Hello there!' });
 });
+app.get('/why_work_with_us', (req, res) => {
+    res.render('why_work_with_us', { title: 'Hey', message: 'Hello there!' });
+});
 
 app.get('/about', (req, res) => {
     res.render('about', { title: 'Hey', message: 'Hello there!' });
