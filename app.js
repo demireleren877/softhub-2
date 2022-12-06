@@ -97,9 +97,83 @@ app.post("/faq", async (req, res) => {
 
 
 });
+app.post("/contacts", async (req, res) => {
+    console.log(req.body);
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'softhub.iletisim1@gmail.com',
+            pass: 'vnrbhdxoqbcnlzvn'
+        }
+    });
 
+    const handlebarOptions = {
+        viewEngine: {
+            extName: '.html',
+            partialsDir: path.resolve('./views'),
+            defaultLayout: false,
+        },
+        viewPath: path.resolve('./views'),
+        extName: '.handlebars',
+    };
+
+    transporter.use('compile', hbs(handlebarOptions));
+
+    const mailOptions = {
+        template: "email",
+        context: {
+            email: req.body.email,
+            name: req.body.name,
+            subject: req.body.subject,
+            message: req.body.message
+        },
+        from: req.body.email,
+        to: "info@softhub.com.tr",
+        subject: 'New Message From softhub.com',
+    };
+    const response_key = req.body["g-recaptcha-response"];
+    const secret_key = "6LcND8wiAAAAAJhbeYXn95IgauLHxCeUTtCPuwkR";
+    const options = {
+        url: `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${response_key}`,
+        headers: { "Content-Type": "application/x-www-form-urlencoded", 'json': true },
+    };
+
+
+    if (req.body.name && req.body.email && req.body.subject && req.body.message) {
+        if (validator.validate(req.body.email)) {
+            try {
+                const re = await request(options);
+                console.log(options);
+                if (JSON.parse(re.body)['success']) {
+                    transporter.sendMail(mailOptions, function (error, info) {
+                        if (error) {
+                            console.log(error);
+                            res.send('error');
+                        } else {
+                            console.log('Email sent: ' + info.response);
+                            res.send('success');
+                        }
+                    });
+                    return res.redirect('/');
+                }
+
+            } catch (error) {
+                return res.send({ response: "Failed" });
+            }
+
+
+        }
+    } else {
+
+    }
+
+
+});
 app.get('/faq', (req, res) => {
     getDataFirestore(res);
+});
+app.get('/howitworks', (req, res) => {
+    res.render('howitworks', { title: 'Hey', message: 'Hello there!' });
 });
 
 app.get('/service-1', (req, res) => {
