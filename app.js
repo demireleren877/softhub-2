@@ -56,7 +56,7 @@ app.post("/faq", async (req, res) => {
             message: req.body.message
         },
         from: req.body.email,
-        to: "demireleren877@gmail.com",
+        to: "info@softhub.com.tr",
         subject: 'New Message From softhub.com',
     };
     const response_key = req.body["g-recaptcha-response"];
