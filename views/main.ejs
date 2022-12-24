@@ -10568,25 +10568,14 @@
 													<div class="sc_promo_text_inner">
 														<h6
 															class="sc_item_subtitle sc_promo_subtitle sc_align_left sc_item_title_style_default">
-															SoftHub'a Hoş Geldiniz</h6>
+															<%= welcome[0]["title"] %>
+														</h6>
 														<!-- <h1
 																class="sc_item_title sc_promo_title sc_align_left sc_item_title_style_default sc_item_title_tag">
 																Do You Need a Personal Assistant?</h1> -->
 														<div class="sc_item_descr sc_promo_descr sc_align_left">
-															<p>SoftHub, ilk kıvılcımları 2013 yılında atılmış ; 2020
-																yılında Türkiye’de yazılım alanında çalışmalarına
-																başlamış multidisipliner bir yazılım şirketidir.
-																SoftHub ekibi olarak Türkiye ve yurt dışından
-																yüksek nitelikli
-																ve entegre yazılım geliştirme ekipleri ile
-																profesyonelliğini kendi proje ekiplerine adapte
-																ederek yerel ve uluslararası müşterilerinin devam
-																eden projelerinin güvenli bir şekilde planlanmasını
-																sağlıyoruz.
-																Beceri eksikliği zamanlarında, dijital dönüşümün ön
-																saflarında kalabilmeniz için işinizi yüksek kaliteli
-																ve uygun maliyetli IT/Dijital çözümlerle yürütmenize
-																yardımcı oluyoruz.
+															<p>
+																<%= welcome[0]["content"] %>
 															</p>
 
 
@@ -10651,14 +10640,15 @@
 																					class="sc_action_item_icon_type_ Array"></span>
 																			</div>
 																			<h3 class="sc_action_item_title">
-																				<span>Robotik Proses Otomasyonu
+																				<span>
+																					<%= services[0]["rpa"]["title"] %>
 																				</span>
 																			</h3>
 																			<h6 class="sc_action_item_subtitle">
 																				<span>Keşfet</span>
 																			</h6>
 																		</div><!-- /.sc_action_item_inner --><a
-																			href="/service-2"
+																			href="/rpa"
 																			class="sc_action_item_link sc_action_item_link_over"></a>
 																	</div>
 																</div>
@@ -10683,14 +10673,19 @@
 																					class="sc_action_item_icon_type_ Array"></span>
 																			</div>
 																			<h3 class="sc_action_item_title">
-																				<span>Genesys </span>
-																				<span>VoIP</span>
+																				<span>
+																					<%= services[0]['gvoip']['title'].split(" ")[0] %>
+																				</span>
+																				<span>
+																					<%= services[0]['gvoip']['title'].split(" ")[1] %>
+																				</span>
+
 																			</h3>
-																			<h6 class="sc_action_item_subtitle">
-																				<span>Keşfet</span>
-																			</h6>
+																			<h6 class=" sc_action_item_subtitle">
+																						<span>Keşfet</span>
+																						</h6>
 																		</div><!-- /.sc_action_item_inner --><a
-																			href="/service-1"
+																			href="/gvoip"
 																			class="sc_action_item_link sc_action_item_link_over"></a>
 																	</div>
 																</div>
@@ -10710,13 +10705,14 @@
 															<div class="sc_action_item_icon sc_action_item_icon_type_ ">
 																<span class="sc_action_item_icon_type_ "></span>
 															</div>
-															<h3 class="sc_action_item_title"><span>Complex Software
-																</span><span></span><span>Projects</span>
+															<h3 class="sc_action_item_title"><span>
+																	<%= services[0]['complex_softwares']['title'].split(" ")[0] + " " +services[0]['complex_softwares']['title'].split(" ")[1] %>
+															</span><span></span><span><%= services[0]['complex_softwares']['title'].split(" ")[2] %></span>
 															</h3>
-															<h6 class="sc_action_item_subtitle">
-																<span>Keşfet</span>
-															</h6>
-														</div><!-- /.sc_action_item_inner --><a href="/service-4"
+															<h6 class=" sc_action_item_subtitle">
+																		<span>Keşfet</span>
+																		</h6>
+														</div><!-- /.sc_action_item_inner --><a href="/complex_software"
 															class="sc_action_item_link sc_action_item_link_over"></a>
 													</div>
 												</div>
@@ -10738,13 +10734,14 @@
 															<div class="sc_action_item_icon sc_action_item_icon_type_">
 																<span class="sc_action_item_icon_type_"></span>
 															</div>
-															<h3 class="sc_action_item_title"><span>Frontend & Backend
-																</span><span></span><span>Development</span>
+															<h3 class="sc_action_item_title"><span>
+																	<%= services[0]['development']['title'].split(" ")[0] + " " +services[0]['development']['title'].split(" ")[1] + " " +services[0]['development']['title'].split(" ")[2]  %>
+																</span><span></span><span><%= services[0]['development']['title'].split(" ")[3]  %> </span>
 															</h3>
-															<h6 class="sc_action_item_subtitle">
-																<span style="color: white;">Keşfet</span>
-															</h6>
-														</div><!-- /.sc_action_item_inner --><a href="/service-3"
+															<h6 class=" sc_action_item_subtitle">
+																		<span style="color: white;">Keşfet</span>
+																		</h6>
+														</div><!-- /.sc_action_item_inner --><a href="/development"
 															class="sc_action_item_link sc_action_item_link_over"></a>
 													</div>
 												</div>
@@ -10768,16 +10765,18 @@
 																					class="sc_action_item_icon_type_ Array"></span>
 																			</div>
 																			<h3 class="sc_action_item_title">
-																				<span>QA</span>
-																				<span style="font-size: large;">Kalite
-																					Güvencesi ve Test
-																					Hizmetleri</span>
+																				<span>
+																					<%= services[0]['qa']['title'] %>
+																				</span>
+																				<span style="font-size: large;">
+																					<%= services[0]['qa']['subtitle'] %>
+																				</span>
 																			</h3>
 																			<h6 class="sc_action_item_subtitle">
 																				<span>Keşfet</span>
 																			</h6>
 																		</div><!-- /.sc_action_item_inner --><a
-																			href="/service-5"
+																			href="/qa"
 																			class="sc_action_item_link sc_action_item_link_over"></a>
 																	</div>
 																</div>
@@ -10842,7 +10841,8 @@
 								class="sc_services sc_services_hover sc_services_featured_top">
 								<h1
 									class="sc_item_title sc_services_title sc_align_center sc_item_title_style_default sc_item_title_tag">
-									Nasıl Çalışıyoruz</h1>
+									<%= how_it_works[0]["title"] %>
+								</h1>
 								<div class="row" style="margin-top: 25px;">
 									<div class="col-lg-3 col-md-6 col-sm-12">
 										<div class="sc_services_item with_content with_image">
@@ -10851,8 +10851,9 @@
 												<div class="sc_services_item_header_inner">
 													<span class="sc_services_item_number">01</span>
 													<div style="white-space: nowrap;">
-														<h4 class="sc_services_item_title"><a
-																href="/howitworks">Planlama</a>
+														<h4 class="sc_services_item_title"><a href="/howitworks">
+																<%= how_it_works[0]["works"][0]["name"] %>
+															</a>
 														</h4>
 													</div>
 													<a href="/howitworks" id="sc_services_1474593398_icon-clock-1"
@@ -10868,15 +10869,14 @@
 													<span class="sc_services_item_number">01</span>
 
 													<div style="white-space: nowrap; margin-bottom: 20px;">
-														<h4 class="sc_services_item_title"><a
-																href="/howitworks">Planlama</a>
+														<h4 class="sc_services_item_title"><a href="/howitworks">
+																<%= how_it_works[0]["works"][0]["name"] %>
+															</a>
 														</h4>
 													</div>
 													<div class="sc_services_item_text">
-														<p>ClickUp, Jira, ve Confluence bilişim
-															sistemlerini kullanarak ekiplerimiz ile
-															en hızlı yöntemlerle çalışmalarımızı
-															planlıyoruz.
+														<p>
+															<%= how_it_works[0]["works"][0]["content"] %>
 														</p>
 													</div>
 												</div>
@@ -10892,8 +10892,9 @@
 												<div class="sc_services_item_header_inner">
 													<span class="sc_services_item_number">02</span>
 													<div style="white-space: nowrap;">
-														<h4 class="sc_services_item_title"><a
-																href="/howitworks">Tasarım</a>
+														<h4 class="sc_services_item_title"><a href="/howitworks">
+																<%= how_it_works[0]["works"][1]["name"] %>
+															</a>
 														</h4>
 													</div>
 													<a href="/howitworks" id="sc_services_1474593398_icon-design_work"
@@ -10907,16 +10908,15 @@
 												style="background-image: url(img/post-13.jpg);">
 												<div class="sc_services_item_content_inner">
 													<span class="sc_services_item_number">02</span>
-													<div style="white-space: nowrap;">
-														<h4 class="sc_services_item_title"><a
-																href="/howitworks">Tasarım</a>
+													<div style="white-space: nowrap; margin-bottom: 20px;">
+														<h4 class="sc_services_item_title"><a href="/howitworks">
+																<%= how_it_works[0]["works"][1]["name"] %>
+															</a>
 														</h4>
 													</div>
 													<div class="sc_services_item_text">
-														<p>Tasarımcılarımızın kullandığı Photoshop,
-															XD, Illustrator programları ile en
-															yüksek kalitede mükemmel tasarımlar
-															çıkartıyoruz.
+														<p>
+															<%= how_it_works[0]["works"][1]["content"] %>
 														</p>
 													</div>
 												</div>
@@ -10933,8 +10933,9 @@
 												<div class="sc_services_item_header_inner">
 													<span class="sc_services_item_number">03</span>
 													<div style="white-space: nowrap;">
-														<h4 class="sc_services_item_title"><a
-																href="/howitworks">Geliştirme</a>
+														<h4 class="sc_services_item_title"><a href="/howitworks">
+																<%= how_it_works[0]["works"][2]["name"] %>
+															</a>
 														</h4>
 													</div>
 													<a href="/howitworks" id="sc_services_1474593398_icon-book-1"
@@ -10949,16 +10950,14 @@
 												<div class="sc_services_item_content_inner">
 													<span class="sc_services_item_number">03</span>
 													<div style="white-space: nowrap; margin-bottom: 20px;">
-														<h4 class="sc_services_item_title"><a
-																href="/howitworks">Geliştirme</a>
+														<h4 class="sc_services_item_title"><a href="/howitworks">
+																<%= how_it_works[0]["works"][2]["name"] %>
+															</a>
 														</h4>
 													</div>
 													<div class="sc_services_item_text">
-														<p>MS Visual Studio, GitHub, GitLab,
-															Jenkins'i Kullanarak teknoloji
-															uzmanlarımız tarafından
-															projelerimizi canlı projeler haline
-															getiriyoruz.
+														<p>
+															<%= how_it_works[0]["works"][2]["content"] %>
 														</p>
 													</div>
 												</div>
@@ -10975,8 +10974,9 @@
 												<div class="sc_services_item_header_inner">
 													<span class="sc_services_item_number">04</span>
 													<div style="white-space: nowrap;">
-														<h4 class="sc_services_item_title"><a
-																href="/howitworks">Uygulama</a>
+														<h4 class="sc_services_item_title"><a href="/howitworks">
+																<%= how_it_works[0]["works"][3]["name"] %>
+															</a>
 														</h4>
 													</div>
 													<a href="/howitworks" id="sc_services_1474593398_icon-book-1"
@@ -10991,15 +10991,14 @@
 												<div class="sc_services_item_content_inner">
 													<span class="sc_services_item_number">04</span>
 													<div style="white-space: nowrap; margin-bottom: 20px;">
-														<h4 class="sc_services_item_title"><a
-																href="/howitworks">Uygulama</a>
+														<h4 class="sc_services_item_title"><a href="/howitworks">
+																<%= how_it_works[0]["works"][3]["name"] %>
+															</a>
 														</h4>
 													</div>
 													<div class="sc_services_item_text">
-														<p>Softhub servis merkezimizde Jenkins
-															kullanarak kullanıcılarımızın
-															projelerinde sürekli entegre şekilde
-															çalışıyoruz.
+														<p>
+															<%= how_it_works[0]["works"][3]["content"] %>
 														</p>
 													</div>
 												</div>
@@ -11048,7 +11047,8 @@
 												class="sc_content sc_content_default sc_float_center sc_margin_large">
 												<h2
 													class="sc_item_title sc_content_title sc_align_left sc_item_title_style_default sc_item_title_tag">
-													Uzmanlık Alanlarımız</h2>
+													<%= specialities[0]["title"] %>
+												</h2>
 												<div class="w3-content w3-section">
 													<div class="mySlides w3-animate-right sc_content_container">
 														<div class="vc_empty_space" style="height: 2.2em"><span
@@ -11062,22 +11062,29 @@
 																			<a href="#1489583581247-b75ebfba-0ec8"
 																				id="slider1" data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Kullandığımız
-																					Diller</span></a>
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["used_languages"]["name"]
+																						%>
+																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab" data-vc-tab=""><a
 																				id="slider2"
 																				href="#1489583581272-c03a4181-7e30"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Frameworks</span></a>
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["frameworks"]["name"]
+																						%>
+																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab" data-vc-tab=""><a
 																				id="slider3"
 																				href="#1489583581272-c03a4181-7e304"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Tools
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["tools"]["name"]
+																						%>
 																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab" data-vc-tab=""><a
@@ -11085,7 +11092,9 @@
 																				href="#1489583581272-c03a4181-7e309"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Databases
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["databases"]["name"]
+																						%>
 																				</span></a>
 																		</li>
 																	</ul>
@@ -11100,8 +11109,10 @@
 																						href="#1489583581247-b75ebfba-0ec8"
 																						data-vc-accordion=""
 																						data-vc-container=".vc_tta-container"><span
-																							class="vc_tta-title-text">Kullandığımız
-																							Diller</span></a>
+																							class="vc_tta-title-text">
+																							<%= specialities[0]["fields"]["used_languages"]["name"]
+																								%>
+																						</span></a>
 																				</h4>
 																			</div>
 																			<div class="vc_tta-panel-body">
@@ -11110,47 +11121,26 @@
 																					<div class="wpb_wrapper">
 																						<table>
 																							<tbody>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">1</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>Java/C#</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">2</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>Javascript
-																										</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">3</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>HTML5</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">4</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>C/C++</h6>
-																									</td>
-																								</tr>
+																								<% for( let index=0;
+																									index < 4; index++ )
+																									{ %>
+																									<tr>
+																										<td>
+																											<h2><span
+																													style="color: #1439b6;">
+																													<%= index+1
+																														%>
+																												</span>
+																											</h2>
+																										</td>
+																										<td>
+																											<h6>
+																												<%= specialities[0]["fields"]["used_languages"]["values"][index]
+																													%>
+																											</h6>
+																										</td>
+																									</tr>
+																									<% } %>
 																							</tbody>
 																						</table>
 
@@ -11177,22 +11167,29 @@
 																			<a href="#1489583581247-b75ebfba-0ec8"
 																				id="slider1" data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Kullandığımız
-																					Diller</span></a>
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["used_languages"]["name"]
+																						%>
+																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab vc_active" data-vc-tab="">
 																			<a id="slider2"
 																				href="#1489583581272-c03a4181-7e30"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Frameworks</span></a>
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["frameworks"]["name"]
+																						%>
+																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab" data-vc-tab=""><a
 																				id="slider3"
 																				href="#1489583581272-c03a4181-7e304"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Tools
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["tools"]["name"]
+																						%>
 																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab" data-vc-tab=""><a
@@ -11200,7 +11197,9 @@
 																				href="#1489583581272-c03a4181-7e309"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Databases
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["databases"]["name"]
+																						%>
 																				</span></a>
 																		</li>
 																	</ul>
@@ -11215,7 +11214,10 @@
 																						href="#1489583581272-c03a4181-7e30"
 																						data-vc-accordion=""
 																						data-vc-container=".vc_tta-container"><span
-																							class="vc_tta-title-text">Frameworks</span></a>
+																							class="vc_tta-title-text">
+																							<%= specialities[0]["fields"]["frameworks"]["name"]
+																								%>
+																						</span></a>
 																				</h4>
 																			</div>
 																			<div class="vc_tta-panel-body">
@@ -11224,51 +11226,26 @@
 																					<div class="wpb_wrapper">
 																						<table>
 																							<tbody>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">1</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>React
-																										</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">2</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>Angular
-																										</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">3</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>Vue
-																										</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">4</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>.NET
-																										</h6>
-																									</td>
-																								</tr>
-
+																								<% for( let index=0;
+																									index < 4; index++ )
+																									{ %>
+																									<tr>
+																										<td>
+																											<h2><span
+																													style="color: #1439b6;">
+																													<%= index+1
+																														%>
+																												</span>
+																											</h2>
+																										</td>
+																										<td>
+																											<h6>
+																												<%= specialities[0]["fields"]["frameworks"]["values"][index]
+																													%>
+																											</h6>
+																										</td>
+																									</tr>
+																									<% } %>
 																							</tbody>
 																						</table>
 
@@ -11295,22 +11272,29 @@
 																			<a href="#1489583581247-b75ebfba-0ec8"
 																				id="slider1" data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Kullandığımız
-																					Diller</span></a>
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["used_languages"]["name"]
+																						%>
+																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab" data-vc-tab=""><a
 																				id="slider2"
 																				href="#1489583581272-c03a4181-7e30"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Frameworks</span></a>
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["frameworks"]["name"]
+																						%>
+																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab vc_active" data-vc-tab="">
 																			<a id="slider3"
 																				href="#1489583581272-c03a4181-7e304"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Tools
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["tools"]["name"]
+																						%>
 																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab" data-vc-tab=""><a
@@ -11318,7 +11302,9 @@
 																				href="#1489583581272-c03a4181-7e309"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Databases
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["databases"]["name"]
+																						%>
 																				</span></a>
 																		</li>
 																	</ul>
@@ -11333,7 +11319,10 @@
 																						href="#1489583581272-c03a4181-7e304"
 																						data-vc-accordion=""
 																						data-vc-container=".vc_tta-container"><span
-																							class="vc_tta-title-text">Tools</span></a>
+																							class="vc_tta-title-text">
+																							<%= specialities[0]["fields"]["tools"]["name"]
+																								%>
+																						</span></a>
 																				</h4>
 																			</div>
 																			<div class="vc_tta-panel-body">
@@ -11342,52 +11331,26 @@
 																					<div class="wpb_wrapper">
 																						<table>
 																							<tbody>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">1</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>IntelliJ
-																										</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">2</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>Eclipse
-																										</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">3</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>MS Office
-																										</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">4</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>Visual
-																											Studio
-																										</h6>
-																									</td>
-																								</tr>
-
+																								<% for( let index=0;
+																									index < 4; index++ )
+																									{ %>
+																									<tr>
+																										<td>
+																											<h2><span
+																													style="color: #1439b6;">
+																													<%= index+1
+																														%>
+																												</span>
+																											</h2>
+																										</td>
+																										<td>
+																											<h6>
+																												<%= specialities[0]["fields"]["tools"]["values"][index]
+																													%>
+																											</h6>
+																										</td>
+																									</tr>
+																									<% } %>
 																							</tbody>
 																						</table>
 
@@ -11414,22 +11377,29 @@
 																			<a href="#1489583581247-b75ebfba-0ec8"
 																				id="slider1" data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Kullandığımız
-																					Diller</span></a>
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["used_languages"]["name"]
+																						%>
+																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab" data-vc-tab=""><a
 																				id="slider2"
 																				href="#1489583581272-c03a4181-7e30"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Frameworks</span></a>
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["frameworks"]["name"]
+																						%>
+																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab" data-vc-tab=""><a
 																				id="slider3"
 																				href="#1489583581272-c03a4181-7e304"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Tools
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["tools"]["name"]
+																						%>
 																				</span></a>
 																		</li>
 																		<li class="vc_tta-tab vc_active" data-vc-tab="">
@@ -11437,7 +11407,9 @@
 																				href="#1489583581272-c03a4181-7e309"
 																				data-vc-tabs=""
 																				data-vc-container=".vc_tta"><span
-																					class="vc_tta-title-text">Databases
+																					class="vc_tta-title-text">
+																					<%= specialities[0]["fields"]["databases"]["name"]
+																						%>
 																				</span></a>
 																		</li>
 																	</ul>
@@ -11452,7 +11424,10 @@
 																						href="#1489583581272-c03a4181-7e309"
 																						data-vc-accordion=""
 																						data-vc-container=".vc_tta-container"><span
-																							class="vc_tta-title-text">Databases</span></a>
+																							class="vc_tta-title-text">
+																							<%= specialities[0]["fields"]["databases"]["name"]
+																								%>
+																						</span></a>
 																				</h4>
 																			</div>
 																			<div class="vc_tta-panel-body">
@@ -11461,49 +11436,26 @@
 																					<div class="wpb_wrapper">
 																						<table>
 																							<tbody>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">1</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>MsSQL/MySQL
-																										</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">2</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>PostgreSQL
-																										</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">3</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>MongoDB</h6>
-																									</td>
-																								</tr>
-																								<tr>
-																									<td>
-																										<h2><span
-																												style="color: #1439b6;">4</span>
-																										</h2>
-																									</td>
-																									<td>
-																										<h6>Oracle</h6>
-																									</td>
-																								</tr>
-
+																								<% for( let index=0;
+																									index < 4; index++ )
+																									{ %>
+																									<tr>
+																										<td>
+																											<h2><span
+																													style="color: #1439b6;">
+																													<%= index+1
+																														%>
+																												</span>
+																											</h2>
+																										</td>
+																										<td>
+																											<h6>
+																												<%= specialities[0]["fields"]["databases"]["values"][index]
+																													%>
+																											</h6>
+																										</td>
+																									</tr>
+																									<% } %>
 																							</tbody>
 																						</table>
 
@@ -11567,13 +11519,20 @@
 													<div class="wpb_text_column wpb_content_element ">
 														<a style="text-decoration: none;" href="/why_work_with_us">
 															<div class="wpb_wrapper">
-																<h4>Neden Bizimle Çalışmalısınız ?</h4>
+																<h5 style="font-size: 1.5em;">
+																	<%= with_us[0]["why_with_us"]["title"] %>
+																</h5>
 																<ul class="trx_addons_list_success_circled">
-																	<li>Esnek isteğe bağlı işe alma</li>
-																	<li>Dijital gündeminize güç katın</li>
-																	<li>Yönetilebilir riskler</li>
-																	<li>Hızlı Öğrenme ve Geliştirme
-																	</li>
+																	<% for( let index=0; index
+																		<with_us[0]["why_with_us"]["values"].length ;
+																		index++ ) { %>
+
+																		<li>
+																			<%= with_us[0]["why_with_us"]["values"][index]
+																				%>
+																		</li>
+
+																		<% } %>
 
 
 																</ul>
@@ -11600,14 +11559,25 @@
 													<div class="wpb_text_column wpb_content_element ">
 														<a style="text-decoration: none;" href="/how_work_with_us">
 															<div class="wpb_wrapper">
-																<h4>Bizimle Nasıl Çalışabilirsiniz?</h4>
+																<h4>
+																	<%= with_us[0]["how_with_us"]["title"] %>
+																</h4>
 																<ul class="trx_addons_list_success_circled">
-																	<li>Bizimle iletişime geçin</li>
-																	<li>Proje Tahmini</li>
-																	<li>Sözleşme</li>
+																	<% for( let index=0; index <
+																		with_us[0]["how_with_us"]["values"].length ;
+																		index++ ) { %>
+
+																		<li>
+																			<%= with_us[0]["how_with_us"]["values"][index]
+																				%>
+																		</li>
+
+																		<% } %>
+
+
 																</ul>
 																<a style="position: absolute; text-decoration: none; margin-top: 10px;"
-																	href="/how_work_with_us">Daha Fazlası ></a>
+																	href="/why_work_with_us">Daha Fazlası ></a>
 
 															</div>
 														</a>
@@ -11650,18 +11620,12 @@
 													<div class="sc_promo_text_inner">
 														<h6
 															class="sc_item_subtitle sc_promo_subtitle sc_align_left sc_item_title_style_default">
-															Hikayemiz</h6>
+															<%= our_story[0]["title"] %>
+														</h6>
 														<div class="sc_item_descr sc_promo_descr sc_align_left">
-															<p>Softhub ekibi 2018 yılından bu yana firmalara
-																projelere dış kaynak hizmeti veren bir ekiptir.
-																Örneğin TRC DANIŞMANLIK, VKB. gibi... Ekip
-																arkadaşlarımız araştırma geliştirme ve proje
-																yönetimi konusunda 15 yılı aşkın deneyime sahiptir.
-																Bu süreçlerde edindiğimiz bilgi birikimi ile
-																ekibimizi daha genişletmeyi hedef alıyoruz .
-																Ülkemizde gelecek vaat eden yazılım geliştircileri
-																eğitmek için anlaşmalı olduğumuz eğitim kurumları
-																ile düzenli eğitim kampları düzenliyoruz.</p>
+															<p>
+																<%= our_story[0]["content"] %>
+															</p>
 														</div>
 														<!-- /.sc_item_button sc_item_button_default sc_promo_button sc_align_left -->
 													</div>
@@ -12231,8 +12195,8 @@
 		} // End of RevInitScript
 
 		if (window.RS_MODULES.checkMinimal !== undefined) { window.RS_MODULES.checkMinimal(); };
-	</script>
 
+	</script>
 </body>
 
 </html>

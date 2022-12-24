@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="profile" href="//gmpg.org/xfn/11">
     <link rel="pingback" href="https://christine-miller.themerex.net/xmlrpc.php">
-    <title>QA &#8211; Softhub</title>
+    <title>Complex Software Projects &#8211; Softhub</title>
     <meta name='robots' content='noindex, nofollow'>
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <link rel='dns-prefetch' href='//s.w.org'>
@@ -10306,13 +10306,16 @@
                                 <div class="sc_layouts_item">
                                     <div id="sc_layouts_title_358407558" class="sc_layouts_title">
                                         <div class="sc_layouts_title_title">
-                                            <h1 class="sc_layouts_title_caption">QA </h1>
+                                            <h1 class="sc_layouts_title_caption">
+                                                <%= data[0]['title'] %>
+                                            </h1>
                                         </div>
                                         <div class="sc_layouts_title_breadcrumbs">
                                             <div class="breadcrumbs"><a class="breadcrumbs_item home"
                                                     href="/">Anasayfa</a><span
                                                     class="breadcrumbs_delimiter"></span><span
-                                                    class="breadcrumbs_item current">QA
+                                                    class="breadcrumbs_item current">
+                                                    <%= data[0]['title'] %>
                                                 </span>
                                             </div>
                                         </div>
@@ -10366,20 +10369,55 @@
                             <section class="services_page_header">
 
                                 <div class="services_page_featured"><img width="1170" height="658"
-                                        src="img/qa_detail.png"
-                                        class="attachment-christine-miller-thumb-huge size-christine-miller-thumb-huge wp-post-image"
-                                        alt="Business Assistance" itemprop="image" srcset="img/qa_detail.png"
-                                        sizes="(max-width: 1170px) 100vw, 1170px"></div>
+                                        src="<%= data[0]['image'] %>" class="attachment-christine-miller-thumb-huge size-christine-miller-thumb-huge
+                                    wp-post-image" alt="Business Assistance" itemprop="image"
+                                        srcset="<%= data[0]['image'] %>" sizes="(max-width: 1170px) 100vw, 1170px">
+                                </div>
                             </section>
                             <section style="font-weight: 400; font-size:1.15empt"
                                 class="services_page_content entry-content" itemprop="articleBody">
-                                <p><strong>Kalite güvencesi ve test hizmetleri</strong> <br>
+                                <p><strong>
+                                        <%= data[0]['content']['first']['title'] %>
+                                    </strong><br>
 
-                                    Şirketinizin iş başarısı konseptiyle uyumlu kalite güvencesi (QA), kalite kontrolünü
-                                    (QC) garanti ediyoruz. Kaliteyi sağlama konusundaki uzmanlığımız sürekli
-                                    gelişiyor,
-                                    yeni araçlar benimsiyor, endüstri ve endüstri ihtiyaçlarını karşılamak için yeni
-                                    yaklaşımları takip ediyoruz.
+                                    <%= data[0]['content']['first']['content'] %>
+                                        <br><br>
+
+                                        <strong>
+                                            <%= data[0]['content']['second']['title'] %>
+                                        </strong><br>
+
+                                        <%= data[0]['content']['second']['content'] %> <br><br>
+
+                                            <strong>
+                                                <%= data[0]['content']['third']['title'] %>
+                                            </strong> <br>
+
+                                            <%= data[0]['content']['third']['content'] %> <br><br>
+
+                                                <strong>
+                                                    <%= data[0]['content']['fourth']['title'] %>
+                                                </strong> <br>
+
+                                                <%= data[0]['content']['fourth']['content'] %> <br><br>
+
+                                                    <strong>
+                                                        <%= data[0]['content']['fifth']['title'] %>
+                                                    </strong> <br>
+
+                                                    <%= data[0]['content']['fifth']['content'] %> <br><br>
+
+                                                        <strong>
+                                                            <%= data[0]['content']['sixth']['title'] %>
+                                                        </strong> <br>
+
+                                                        <%= data[0]['content']['sixth']['content'] %> <br><br>
+
+                                                            <strong>
+                                                                <%= data[0]['content']['seventh']['title'] %>
+                                                            </strong> <br>
+
+                                                            <%= data[0]['content']['seventh']['content'] %>
                                 </p>
 
                             </section><!-- .entry-content -->

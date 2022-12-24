@@ -7,7 +7,9 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="profile" href="//gmpg.org/xfn/11">
     <link rel="pingback" href="https://christine-miller.themerex.net/xmlrpc.php">
-    <title>Nasıl Çalışıyoruz &#8211; Softhub</title>
+    <title>
+        <%= data[0]["title"] %> &#8211; Softhub
+    </title>
     <meta name='robots' content='noindex, nofollow'>
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <link rel='dns-prefetch' href='//s.w.org'>
@@ -10306,13 +10308,17 @@
                                 <div class="sc_layouts_item">
                                     <div id="sc_layouts_title_358407558" class="sc_layouts_title">
                                         <div class="sc_layouts_title_title">
-                                            <h1 class="sc_layouts_title_caption">Nasıl Çalışıyoruz</h1>
+                                            <h1 class="sc_layouts_title_caption">
+                                                <%= data[0]["title"] %>
+                                            </h1>
                                         </div>
                                         <div class="sc_layouts_title_breadcrumbs">
                                             <div class="breadcrumbs"><a class="breadcrumbs_item home"
                                                     href="/">Anasayfa</a><span
                                                     class="breadcrumbs_delimiter"></span><span
-                                                    class="breadcrumbs_item current">Nasıl Çalışıyoruz</span>
+                                                    class="breadcrumbs_item current">
+                                                    <%= data[0]["title"] %>
+                                                </span>
                                             </div>
                                         </div>
                                     </div><!-- /.sc_layouts_title -->
@@ -10364,20 +10370,11 @@
 
 
                             <section class="services_page_content entry-content" itemprop="articleBody">
-                                <p style="font-weight:400; font-size:1.15em">Softhub olarak edindiğimiz çalışma prensibi
-                                    ve kültürüyle birlikte kullanıcılarımızın
-                                    dijital dönüşümünü ön safhalarda tutuyoruz. <br> Sunduğumuz bireysel teknoloji
-                                    çözümleri
-                                    kullanıcılarımızın hızlı ihtiyaçlarını gidermek üzere uyarlanmıştır. <br><br>
-
-                                    Teknolojiye olan tutkumuzdan dolayı kendini yazılım alanına adamış uzman bir ekibe
-                                    sahip olmaktan gurur duyuyoruz. <br><br>
-
-                                    Esnek çalışma prensibimiz sayesinde ihtiyaçlara en doğru zamanda en doğru şekilde
-                                    geri dönüşte bulunabiliyoruz. <br><br>
-
-                                    Dünyanın farklı bölgelerinde bulunan kaynaklarımız sayesinde kullanıcılarımız için
-                                    coğrafi riskleri en aza indiriyoruz. </p>
+                                <p style="font-weight:400; font-size:1.15em">
+                                    <% for( let index=0; index < data[0]["content"].length; index++ ) { %>
+                                        <%= data[0]["content"][index] %> <br><br>
+                                            <% } %>
+                                </p>
 
                             </section><!-- .entry-content -->
                         </article>

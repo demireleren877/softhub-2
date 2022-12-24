@@ -7,7 +7,9 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="profile" href="//gmpg.org/xfn/11">
     <link rel="pingback" href="https://christine-miller.themerex.net/xmlrpc.php">
-    <title>Frontend & Backend Development &#8211; Softhub</title>
+    <title>
+        <%= data[0]["title"] %> &#8211; Softhub
+    </title>
     <meta name='robots' content='noindex, nofollow'>
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <link rel='dns-prefetch' href='//s.w.org'>
@@ -10257,8 +10259,8 @@
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="sc_layouts_item"><a style="text-decoration: none;" class="sc_layouts_logo"
-                                        href="/"><img style="width: 250px;" src="img/header.png"
-                                            alt=""></a><!-- /.sc_layouts_logo -->
+                                        href="/"><img style="width: 250px;" src="img/header.png" alt=""></a>
+                                    <!-- /.sc_layouts_logo -->
                                 </div>
                             </div>
                         </div>
@@ -10305,15 +10307,17 @@
                             <div class="wpb_wrapper">
                                 <div class="sc_layouts_item">
                                     <div id="sc_layouts_title_358407558" class="sc_layouts_title">
-
                                         <div class="sc_layouts_title_title">
-                                            <h1 class="sc_layouts_title_caption">Frontend & Backend Development </h1>
+                                            <h1 class="sc_layouts_title_caption">
+                                                <%= data[0]["title"] %>
+                                            </h1>
                                         </div>
                                         <div class="sc_layouts_title_breadcrumbs">
                                             <div class="breadcrumbs"><a class="breadcrumbs_item home"
                                                     href="/">Anasayfa</a><span
                                                     class="breadcrumbs_delimiter"></span><span
-                                                    class="breadcrumbs_item current">Frontend & Backend Development
+                                                    class="breadcrumbs_item current">
+                                                    <%= data[0]["title"] %>
                                                 </span>
                                             </div>
                                         </div>
@@ -10327,7 +10331,7 @@
             <div class="menu_mobile_overlay"></div>
             <div class="menu_mobile menu_mobile_fullscreen scheme_default">
                 <div class="menu_mobile_inner">
-                    <a class="menu_mobile_close icon-cancel"></a><a class="sc_layouts_logo" href="../../index.htm"><span
+                    <a class="menu_mobile_close icon-cancel"></a><a class="sc_layouts_logo" href="/"><span
                             class="logo_text">Softhub</span></a>
                     <nav class="menu_mobile_nav_area">
                         <ul id="menu_mobile" class=" menu_mobile_nav">
@@ -10366,23 +10370,23 @@
 
                             <section class="services_page_header">
 
-                                <div class="services_page_featured"><img width="1170" height="658"
-                                        src="img/frontbackend_detail.jpg"
-                                        class="attachment-christine-miller-thumb-huge size-christine-miller-thumb-huge wp-post-image"
-                                        alt="Business Assistance" itemprop="image" srcset="img/frontbackend_detail.jpg"
-                                        sizes="(max-width: 1170px) 100vw, 1170px"></div>
+                                <div class="services_page_featured"><img width="1170" height="500"
+                                        src="<%= data[0]['image'] %>" class="attachment-christine-miller-thumb-huge size-christine-miller-thumb-huge
+                                    wp-post-image" alt="Business Assistance" itemprop="image"
+                                        srcset="<%= data[0]['image'] %>" sizes="(max-width: 900px) 100vw, 1170px"></div>
                             </section>
                             <section style="font-weight: 400; font-size:1.15empt"
                                 class="services_page_content entry-content" itemprop="articleBody">
-                                <p>Gereksinimlerinizi ve müşterilerinizin ihtiyaçlarını anlıyoruz. Bu sayede firmanızın
-                                    en son teknolojiden faydalanmasını sağlayan, size özel ve sektöre özel çözümler
-                                    geliştiriyoruz. Müşterilerimiz, işleri için ihtiyaç duydukları fikirlerin
-                                    şekilllendirilmesinden kullanıcı yolculuğu tanımlamasına, hızlı prototip
-                                    oluşturmaya, geliştirmeye ve
-                                    sürekli çözüm geliştirmeye kadar bize güveniyor. Ekibimiz, tasarlanan
-                                    projelerin
-                                    zamanında ve bütçe dahilinde teslim edilmesini sağlamak ve riski azaltmak için
-                                    çalışan uzmanlardan oluşmaktadır. </p>
+                                <p>
+                                    <%= data[0]['content']['first'] %>
+                                </p>
+                                <p>
+                                    <% for( let index=0; index < data[0]["content"]["second"].length; index++ ) { %>
+
+                                        <%= data[0]['content']['second'][index] %> <br><br>
+
+                                            <% } %>
+                                </p>
 
                             </section><!-- .entry-content -->
                         </article>

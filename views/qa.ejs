@@ -7,7 +7,9 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="profile" href="//gmpg.org/xfn/11">
     <link rel="pingback" href="https://christine-miller.themerex.net/xmlrpc.php">
-    <title>Complex Software Projects &#8211; Softhub</title>
+    <title>
+        <%= data[0]["title"] %> &#8211; Softhub
+    </title>
     <meta name='robots' content='noindex, nofollow'>
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <link rel='dns-prefetch' href='//s.w.org'>
@@ -10306,13 +10308,16 @@
                                 <div class="sc_layouts_item">
                                     <div id="sc_layouts_title_358407558" class="sc_layouts_title">
                                         <div class="sc_layouts_title_title">
-                                            <h1 class="sc_layouts_title_caption">Complex Software Projects </h1>
+                                            <h1 class="sc_layouts_title_caption">
+                                                <%= data[0]["title"] %>
+                                            </h1>
                                         </div>
                                         <div class="sc_layouts_title_breadcrumbs">
                                             <div class="breadcrumbs"><a class="breadcrumbs_item home"
                                                     href="/">Anasayfa</a><span
                                                     class="breadcrumbs_delimiter"></span><span
-                                                    class="breadcrumbs_item current">Complex Software Projects
+                                                    class="breadcrumbs_item current">
+                                                    <%= data[0]["title"] %>
                                                 </span>
                                             </div>
                                         </div>
@@ -10366,53 +10371,18 @@
                             <section class="services_page_header">
 
                                 <div class="services_page_featured"><img width="1170" height="658"
-                                        src="img/complex_software_detail.jpg"
-                                        class="attachment-christine-miller-thumb-huge size-christine-miller-thumb-huge wp-post-image"
-                                        alt="Business Assistance" itemprop="image"
-                                        srcset="img/complex_software_detail.jpg"
-                                        sizes="(max-width: 1170px) 100vw, 1170px"></div>
+                                        src="<%= data[0]['image'] %>" class="attachment-christine-miller-thumb-huge size-christine-miller-thumb-huge
+                                    wp-post-image" alt="Business Assistance" itemprop="image"
+                                        srcset="<%= data[0]['image'] %>" sizes="(max-width: 1170px) 100vw, 1170px">
+                                </div>
                             </section>
                             <section style="font-weight: 400; font-size:1.15empt"
                                 class="services_page_content entry-content" itemprop="articleBody">
-                                <p><strong>Bulut hizmetleri</strong><br>
+                                <p><strong>
+                                        <%= data[0]["content"]["first"] %>
+                                    </strong> <br>
 
-                                    Başarılı dijital dönüşümünüz için bulut fırsatları hakkında destek oluyoruz.
-                                    <br><br>
-
-                                    <strong>Yapay Zeka / Makine Öğrenimi Hizmetleri</strong><br>
-
-                                    AI / ML hizmetlerimiz, yeniliklerin ve yeni teknolojilerin ön saflarında geleceğe
-                                    adım atmanıza destek olur. <br><br>
-
-                                    <strong>İş Zekası Çözümleri</strong> <br>
-
-                                    SOFTHUB, strateji optimizasyonu ve tahmini, performans araştırması ve trend keşfi,
-                                    bütçe projeksiyonu ve finansal planlama, müşteri analitiği ve gelişmiş raporlama
-                                    gibi iş zekası (BI) hizmetleriyle işletmenizin veri analitiğinin gücünden
-                                    yararlanmasına ve stratejik hedeflerinize ulaşmasına yardımcı olur. <br><br>
-
-                                    <strong>Veri Bilimi Hizmetleri</strong> <br>
-
-                                    Veri bilimi hizmetlerindeki uzmanlarımız, değerlendirilecek verileri belirler ve
-                                    hassas bir şekilde analiz eder. <br><br>
-
-                                    <strong>Dijital Platform Geliştirme</strong> <br>
-
-                                    Tüm son teknoloji hizmetleri ve yöntemleri ile tek bir çözümde birleştiren dijital
-                                    platform geliştirme sunuyoruz. Bu, çevik ve çevik olmayan ekiplerin birlikte
-                                    çalışmasına olanak tanıyan ve hızlı ön uç geliştirme sağlarken sistem kararlılığını
-                                    sürdüren bir sistemdir. <br><br>
-
-                                    <strong>Kurumsal Uygulama Geliştirme</strong> <br>
-
-                                    Mobil uygulamadan dijital platforma, kurumsal uygulama geliştirme uzmanlarımız ile
-                                    işinizi dönüştürmenize yardımcı oluyoruz. <br><br>
-
-                                    <strong>Mikro Hizmet Çözümleri</strong> <br>
-
-                                    Mikro hizmet çözümlerimiz, bakımı ve ölçeklemesi daha kolay olan projeler için çevik
-                                    geliştirme sağlar. Kubernetes kümelerinden bireysel Docker kapsayıcılarına kadar,
-                                    geliştirme performansınızı artıran bir mimari geliştirmenize yardımcı oluyoruz.
+                                    <%= data[0]["content"]["second"] %>
                                 </p>
 
                             </section><!-- .entry-content -->

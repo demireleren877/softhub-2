@@ -7,7 +7,9 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="profile" href="//gmpg.org/xfn/11">
     <link rel="pingback" href="https://christine-miller.themerex.net/xmlrpc.php">
-    <title>GENESYS &#8211; Softhub</title>
+    <title>
+        <%= data[0]["title"] %> &#8211; Softhub
+    </title>
     <meta name='robots' content='noindex, nofollow'>
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <link rel='dns-prefetch' href='//s.w.org'>
@@ -10306,13 +10308,17 @@
                                 <div class="sc_layouts_item">
                                     <div id="sc_layouts_title_358407558" class="sc_layouts_title">
                                         <div class="sc_layouts_title_title">
-                                            <h1 class="sc_layouts_title_caption">GENESYS</h1>
+                                            <h1 class="sc_layouts_title_caption">
+                                                <%= data[0]["title"] %>
+                                            </h1>
                                         </div>
                                         <div class="sc_layouts_title_breadcrumbs">
                                             <div class="breadcrumbs"><a class="breadcrumbs_item home"
                                                     href="/">Anasayfa</a><span
                                                     class="breadcrumbs_delimiter"></span><span
-                                                    class="breadcrumbs_item current">GENESYS</span>
+                                                    class="breadcrumbs_item current">
+                                                    <%= data[0]["title"] %>
+                                                </span>
                                             </div>
                                         </div>
                                     </div><!-- /.sc_layouts_title -->
@@ -10325,7 +10331,7 @@
             <div class="menu_mobile_overlay"></div>
             <div class="menu_mobile menu_mobile_fullscreen scheme_default">
                 <div class="menu_mobile_inner">
-                    <a class="menu_mobile_close icon-cancel"></a><a class="sc_layouts_logo" href="/"><span
+                    <a class="menu_mobile_close icon-cancel"></a><a class="sc_layouts_logo" href="../../index.htm"><span
                             class="logo_text">Softhub</span></a>
                     <nav class="menu_mobile_nav_area">
                         <ul id="menu_mobile" class=" menu_mobile_nav">
@@ -10364,29 +10370,32 @@
 
                             <section class="services_page_header">
 
-                                <div class="services_page_featured"><img width="1170" height="500"
-                                        src="img/voip_detail.jpg"
-                                        class="attachment-christine-miller-thumb-huge size-christine-miller-thumb-huge wp-post-image"
-                                        alt="Business Assistance" itemprop="image" srcset="img/voip_detail.jpg"
-                                        sizes="(max-width: 900px) 100vw, 1170px"></div>
+                                <div class="services_page_featured"><img width="1170" height="658"
+                                        src="<%= data[0]['image'] %>" class="attachment-christine-miller-thumb-huge size-christine-miller-thumb-huge
+                                    wp-post-image" alt="Business Assistance" itemprop="image"
+                                        srcset="<%= data[0]['image'] %>" sizes="(max-width: 1170px) 100vw, 1170px">
+                                </div>
                             </section>
                             <section style="font-weight: 400; font-size:1.15empt"
                                 class="services_page_content entry-content" itemprop="articleBody">
-                                <p>Kurumsal çağrı merkezlerinin daha iyi işletme sonuçlarına ulaşmalarını sağlamak için
-                                    çok kanallı müşteri deneyimini desteklemek,<br> iş süreçlerini ve platformlarının
-                                    geliştirme süreçlerine destek oluyoruz. Kurumsal çağrı merkezlerini sorunsuzca ve
-                                    düşük maliyetle <br> modernize etmenin yollarını arayan organizasyonlara
-                                    deneyimlerimizle
-                                    yardımcı oluyoruz. </p>
-                                <p> ON PREMISE DESTEK <br><br>
+                                <p>
+                                    <%= data[0]["content"]["first"] %> <br><br>
 
-                                    ON PREMISE - CLOUD GEÇİŞLERİ <br><br>
+                                        <%= data[0]["content"]["second"] %>
+                                </p>
+                                <p>
+                                <h5>
+                                    <%= data[0]["content"]["thirth"] %>
+                                </h5> <br>
 
-                                    CLOUD DESTEK/ÜRÜN ÇÖZÜMLERİ <br><br>
+                                <% for( let index=0; index < data[0]["content"]["fourth"].length; index++ ) { %>
 
-                                    ÜRÜN ÇÖZÜMLERİ <br><br>
+                                    <%= data[0]["content"]["fourth"][index] %> <br><br>
 
-                                    DANIŞMANLIK </p>
+                                        <% } %>
+
+
+                                            </p>
                             </section><!-- .entry-content -->
                         </article>
 

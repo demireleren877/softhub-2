@@ -6,8 +6,11 @@ const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-express-handlebars');
 const { promisify } = require('util');
 const request = promisify(require('request'));
-const getDataFirestore = require('./firebase');
+const firebase = require('./firebase');
 const getPostWithFectch = require('./scraper');
+const cookieParser = require("cookie-parser")
+
+app.use(cookieParser());
 
 app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
@@ -16,7 +19,7 @@ app.use(express.static('node_modules'));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.render('main');
+    firebase.getMain(res, req);
 });
 
 app.get('/test', (req, res) => {
@@ -170,26 +173,26 @@ app.post("/contacts", async (req, res) => {
 
 });
 app.get('/faq', (req, res) => {
-    getDataFirestore(res);
+    firebase.getFaqs(res, req);
 });
 app.get('/howitworks', (req, res) => {
-    res.render('howitworks', { title: 'Hey', message: 'Hello there!' });
+    firebase.getHiwd(res, req);
 });
 
-app.get('/service-1', (req, res) => {
-    res.render('service-1', { title: 'Hey', message: 'Hello there!' });
+app.get('/gvoip', (req, res) => {
+    firebase.getService(req, res)
 });
-app.get('/service-2', (req, res) => {
-    res.render('service-2', { title: 'Hey', message: 'Hello there!' });
+app.get('/complex_software', (req, res) => {
+    firebase.getService(req, res)
 });
-app.get('/service-3', (req, res) => {
-    res.render('service-3', { title: 'Hey', message: 'Hello there!' });
+app.get('/qa', (req, res) => {
+    firebase.getService(req, res)
 });
-app.get('/service-4', (req, res) => {
-    res.render('service-4', { title: 'Hey', message: 'Hello there!' });
+app.get('/rpa', (req, res) => {
+    firebase.getService(req, res)
 });
-app.get('/service-5', (req, res) => {
-    res.render('service-5', { title: 'Hey', message: 'Hello there!' });
+app.get('/development', (req, res) => {
+    firebase.getService(req, res)
 });
 app.get('/how_work_with_us', (req, res) => {
     res.render('how_work_with_us', { title: 'Hey', message: 'Hello there!' });

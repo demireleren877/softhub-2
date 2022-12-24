@@ -7,7 +7,9 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="profile" href="//gmpg.org/xfn/11">
     <link rel="pingback" href="https://christine-miller.themerex.net/xmlrpc.php">
-    <title>RPA &#8211; Softhub</title>
+    <title>
+        <%= data[0]["title"] %> &#8211; Softhub
+    </title>
     <meta name='robots' content='noindex, nofollow'>
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
     <link rel='dns-prefetch' href='//s.w.org'>
@@ -10257,8 +10259,8 @@
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="sc_layouts_item"><a style="text-decoration: none;" class="sc_layouts_logo"
-                                        href="/"><img style="width: 250px;" src="img/header.png" alt=""></a>
-                                    <!-- /.sc_layouts_logo -->
+                                        href="/"><img style="width: 250px;" src="img/header.png"
+                                            alt=""></a><!-- /.sc_layouts_logo -->
                                 </div>
                             </div>
                         </div>
@@ -10305,14 +10307,19 @@
                             <div class="wpb_wrapper">
                                 <div class="sc_layouts_item">
                                     <div id="sc_layouts_title_358407558" class="sc_layouts_title">
+
                                         <div class="sc_layouts_title_title">
-                                            <h1 class="sc_layouts_title_caption">Robotik Süreç Otomasyonu</h1>
+                                            <h1 class="sc_layouts_title_caption">
+                                                <%= data[0]["title"] %>
+                                            </h1>
                                         </div>
                                         <div class="sc_layouts_title_breadcrumbs">
                                             <div class="breadcrumbs"><a class="breadcrumbs_item home"
                                                     href="/">Anasayfa</a><span
                                                     class="breadcrumbs_delimiter"></span><span
-                                                    class="breadcrumbs_item current">Robotik Süreç Otomasyonu</span>
+                                                    class="breadcrumbs_item current">
+                                                    <%= data[0]["title"] %>
+                                                </span>
                                             </div>
                                         </div>
                                     </div><!-- /.sc_layouts_title -->
@@ -10365,49 +10372,17 @@
                             <section class="services_page_header">
 
                                 <div class="services_page_featured"><img width="1170" height="658"
-                                        src="img/rpa_detail.png"
-                                        class="attachment-christine-miller-thumb-huge size-christine-miller-thumb-huge wp-post-image"
-                                        alt="Business Assistance" itemprop="image" srcset="img/rpa_detail.png"
-                                        sizes="(max-width: 1170px) 100vw, 1170px"></div>
+                                        src="<%= data[0]['image'] %>" class="attachment-christine-miller-thumb-huge size-christine-miller-thumb-huge
+                                    wp-post-image" alt="Business Assistance" itemprop="image"
+                                        srcset="<%= data[0]['image'] %>" sizes="(max-width: 1170px) 100vw, 1170px">
+                                </div>
                             </section>
                             <section style="font-weight: 400; font-size:1.15empt"
                                 class="services_page_content entry-content" itemprop="articleBody">
-                                <p>Robotik Süreç Otomasyonu (RPA), sıradan,
-                                    tekrarlayan ve
-                                    kurallara dayalı süreçleri
-                                    otomatikleştirmek için mikro yazılım çözümlerinin kullanıldığı bir
-                                    çözümlemedir. Bu
-                                    çözümler önemli ve değerli görevler için personel ve kaynakları verimli hale
-                                    getirmek için kullanılır. <br><br>
-
-                                    RPA teknolojisi, kullanıcılar için tasarlanmış arayüzlerde yapılan eylemlerin
-                                    dijital sistemlerle etkileşime girerek insan eylemini taklit edebilen yazılım
-                                    botları oluşturmasına, devreye almasına ve yönetmesine olanak sağlayan bir
-                                    platformdur. Eylemler arasında gezinme sistemleri; ekranda ne olduğunu anlamak;
-                                    tuş vuruşlarını tamamlama; verileri çıkarma, ekleme, işleme ve tanımlanmış
-                                    eylemleri gerçekleştirme işletimleri bulunmaktadır. </p>
                                 <p>
-                                <h5>RPA'nın faydaları nelerdir?</h5> <br>
-
-                                İş akışlarının verimliliğini artırmak için teknoloji ve fırsat sağlayarak
-                                kuruluşların karlılığını, esnekliğini ve üretkenliğini artırır. <br><br>
-
-                                Hızlandırılmış dijital dönüşüm; <br><br>
-
-                                Önemli maliyet tasarrufu; <br><br>
-
-                                Artan esneklik – iş yükü zirvelerini karşılayın; <br><br>
-
-                                Artırılmış doğruluk – manuel görevlerde hata azaltma; <br><br>
-
-                                Artan uyum; <br><br>
-
-                                Artan üretkenlik; <br><br>
-
-                                Personeli daha değerli işler için serbest bırakır; <br><br>
-
-                                Daha mutlu çalışanlar – tekrarlanmayan manuel görevler
+                                    <%= data[0]['content']['first'] %>
                                 </p>
+
                             </section><!-- .entry-content -->
                         </article>
 
